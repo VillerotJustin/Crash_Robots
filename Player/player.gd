@@ -10,17 +10,24 @@ var last_fire: float
 
 @export_category("Mouvement")
 @export var SPEED: float = 300.0
+@export var Dash_mult: float = 10
 @export var main_camera: G_camera
-
-
+var is_dashing:bool = false
+var input_direction = Vector2.ZERO
 
 func _ready() -> void:
 	pass
 	# TODO check / auto fill references
 
 func get_movement_input():
-	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	velocity = input_direction * SPEED
+	if !is_dashing:
+		input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+		velocity = input_direction * SPEED
+	
+	if Input.is_action_just_pressed("dash"):
+		velocity *= Dash_mult
+		set_collision_layer_value(5, false) # Disable dashable_gap collision
+	
 	
 func shooting():
 	if Time.get_unix_time_from_system()-fire_rate < last_fire:
@@ -57,6 +64,9 @@ func shooting():
 		last_fire = Time.get_unix_time_from_system()
 	
 
+func drill():
+	pass
+
 func _physics_process(_delta: float) -> void:
 	# Moving the Character
 	get_movement_input()
@@ -64,7 +74,16 @@ func _physics_process(_delta: float) -> void:
 	
 	# Shooting
 	shooting()
+	
+	# Drill
+	drill()
 
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	main_camera.update_position(global_position)
+
+
+func _on_dash_end() -> void:
+	is_dashing = false
+	set_collision_layer_value(5, true)
+	

@@ -19,5 +19,15 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	pass
 
-func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+func die():
 	queue_free()
+
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	die()
+
+
+func _on_body_entered(_body: Node) -> void:
+	# Process colision
+	die()
+	
+	
