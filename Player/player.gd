@@ -15,6 +15,10 @@ var last_fire: float
 var is_dashing:bool = false
 var input_direction = Vector2.ZERO
 
+@export_category("Drill")
+@export var drill: Drill
+@export var distance_from_center: float = 1.5
+
 func _ready() -> void:
 	pass
 	# TODO check / auto fill references
@@ -64,8 +68,22 @@ func shooting():
 		last_fire = Time.get_unix_time_from_system()
 	
 
-func drill():
-	pass
+func process_drill():
+	if Input.is_action_pressed("drill") and input_direction != Vector2.ZERO:
+		# Drill position
+		drill.position = player_center.position + input_direction * distance_from_center
+		# Drill orientation
+		# Use Vector2.angle() — returns radians measured from +X axis.
+		var angle_rad := input_direction.angle()
+		drill.rotation = angle_rad + PI / 2
+		
+		drill.monitoring = true
+		drill.visible = true
+		
+	if Input.is_action_just_released("drill"):
+		drill.monitoring = false
+		drill.visible = false
+	
 
 func _physics_process(_delta: float) -> void:
 	# Moving the Character
@@ -76,7 +94,7 @@ func _physics_process(_delta: float) -> void:
 	shooting()
 	
 	# Drill
-	drill()
+	process_drill()
 
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:

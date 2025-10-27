@@ -1,17 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmwupovosbo67"]
+[gd_scene load_steps=6 format=3 uid="uid://bmwupovosbo67"]
 
 [ext_resource type="Script" uid="uid://dfnlnueh40eft" path="res://Player/player.gd" id="1_l8h54"]
 [ext_resource type="Texture2D" uid="uid://cx3d4vcw828q4" path="res://Player/Assets/MC_Placeholder.png" id="2_4ntmi"]
 [ext_resource type="PackedScene" uid="uid://brwd67tms5gu5" path="res://Player/Bullet/bullet.tscn" id="2_btcbx"]
+[ext_resource type="PackedScene" uid="uid://lakgih1sq308" path="res://Player/Drill/drill.tscn" id="4_gwnis"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_btcbx"]
 size = Vector2(16, 32)
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("player_center")]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("player_center", "drill")]
 collision_mask = 27
 script = ExtResource("1_l8h54")
 Bullet_Packed_Scene = ExtResource("2_btcbx")
 player_center = NodePath("PlayerCenter")
+drill = NodePath("Drill")
+distance_from_center = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_4ntmi")
@@ -27,6 +30,13 @@ shape = SubResource("RectangleShape2D_btcbx")
 rect = Rect2(-8, -16, 16, 32)
 
 [node name="DashDuration" type="Timer" parent="."]
+
+[node name="Drill" parent="." instance=ExtResource("4_gwnis")]
+visible = false
+position = Vector2(24, 0)
+rotation = 1.5707964
+scale = Vector2(0.5, 0.5)
+monitoring = false
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
 [connection signal="timeout" from="DashDuration" to="." method="_on_dash_end"]
