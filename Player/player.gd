@@ -56,10 +56,10 @@ func shooting():
 		shooting_direction = shooting_direction.normalized()
 		
 		var bullet: Bullet = Bullet_Packed_Scene.instantiate()
-		bullet.position = player_center.position + shooting_direction * bullet_spawn_distance
+		bullet.position = player_center.global_position + shooting_direction * bullet_spawn_distance
 		bullet.initialize(bullet_speed , shooting_direction)
 		
-		add_child(bullet)
+		get_tree().current_scene.add_child(bullet)
 		
 		last_fire = Time.get_unix_time_from_system()
 	
