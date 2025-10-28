@@ -6,9 +6,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vjy4l"]
 size = Vector2(55, 59)
 
-[node name="Collectible" type="Area2D"]
+[node name="Collectible" type="Area2D" node_paths=PackedStringArray("sprite")]
 collision_layer = 0
 script = ExtResource("1_vjy4l")
+sprite = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ltnrs")
