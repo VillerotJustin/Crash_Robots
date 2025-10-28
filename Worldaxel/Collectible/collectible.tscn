@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://755mf3q56xcx"]
+
+[ext_resource type="Script" uid="uid://t8w64ehrscos" path="res://Worldaxel/Collectible/collectible.gd" id="1_e5ri0"]
+[ext_resource type="Texture2D" uid="uid://d0jch6t33pbpj" path="res://Worldaxel/Collectible/Assets/Ship_Part_5.png" id="2_rhpe3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vjy4l"]
+size = Vector2(55, 59)
+
+[node name="Collectible" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_e5ri0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_rhpe3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_vjy4l")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
