@@ -1,33 +1,35 @@
 extends CharacterBody2D
 
+class_name Enemy
+
 @export_category("HP/Attack")
 @export var max_HP:float = 3
 var current_HP:float = 3
 @export var attack_damage:float = 1
 
 @export_category("Mouvement")
-@export var SPEED:float = 300.0
-@export var patrol_checkpoints: Array[Marker2D]
-@export var distance_to_checkpoint_validation:float = 10.0
-var current_checkpoint_progress: int = 0
+@export var SPEED:float = 0.05
+@export var patrol: PathFollow2D
+@export_enum("loop", "linear") var patrol_type = "loop"
+var is_patroling:bool = true
 
-
+func initialize(patrol_path: PathFollow2D):
+	patrol = patrol_path
 
 func _ready() -> void:
+	print("EnemySpawned: ", position)
 	current_HP = max_HP
+	if patrol == null:
+		push_warning("Enemy has no patrol path")
+
+func patroling(delta) -> void:
+	if patrol_type == "loop":
+		patrol.progress_ratio += SPEED * delta
+	
 
 func _physics_process(_delta: float) -> void:
-	if patrol_checkpoints.size() > 0:
-		var target: Vector2 = patrol_checkpoints[current_checkpoint_progress].position
-		if target.length_squared() < distance_to_checkpoint_validation**2:
-			current_checkpoint_progress += 1
-			target = patrol_checkpoints[current_checkpoint_progress].position
-		
-		var direction: Vector2 = (target - position).normalized()
-		
-		velocity = direction * SPEED
-		
-	
+	if is_patroling:
+		patroling(_delta)
 
 	move_and_slide()
 	
