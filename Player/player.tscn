@@ -117,10 +117,12 @@ shape = SubResource("RectangleShape2D_btcbx")
 visible = false
 position = Vector2(24, 0)
 rotation = 1.5707964
-scale = Vector2(0.5, 0.5)
 monitoring = false
 
 [node name="Battery" type="Timer" parent="."]
+wait_time = 60.0
+
+[node name="Battery" type="Timer" parent="Battery"]
 wait_time = 60.0
 
 [node name="Hit_Box" type="Area2D" parent="."]

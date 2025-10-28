@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8fs0uo3j0uxn"
-path="res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0001s_0002_Piece-Vaisseau-4.png-fa10c55483c71c1926cdfb8afdd620a6.ctex"
+uid="uid://t4emdfbrgeyi"
+path="res://.godot/imported/Drill_Collectible.png-cb51dd5ff178d7607487a7e1f14b5043.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0001s_0002_Piece-Vaisseau-4.png"
-dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0001s_0002_Piece-Vaisseau-4.png-fa10c55483c71c1926cdfb8afdd620a6.ctex"]
+source_file="res://World/Collectible/Assets/Drill_Collectible.png"
+dest_files=["res://.godot/imported/Drill_Collectible.png-cb51dd5ff178d7607487a7e1f14b5043.ctex"]
 
 [params]
 
