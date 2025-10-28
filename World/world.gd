@@ -1,5 +1,7 @@
 extends Node2D
 
+@export_category("References")
+@export var enemy_spawn_points: Array[Marker2D]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
