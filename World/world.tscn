@@ -116,7 +116,6 @@ tile_set = SubResource("TileSet_bkhv4")
 
 [node name="Camera" parent="." instance=ExtResource("3_j8job")]
 position = Vector2(960, 540)
-zoom = Vector2(0.6, 0.6)
 
 [node name="Player" parent="." node_paths=PackedStringArray("main_camera") instance=ExtResource("3_3f78f")]
 position = Vector2(1035, 374)
