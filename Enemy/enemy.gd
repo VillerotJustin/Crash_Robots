@@ -43,4 +43,7 @@ func take_damage(amount: float) -> void:
 		die()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	print(body.name)
+	#print(body.name)
+	if body is Player:
+		body._on_hit_box_body_entered(self)
+	
