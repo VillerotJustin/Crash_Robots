@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://lakgih1sq308"]
 
 [ext_resource type="Script" uid="uid://c2bl4b8xhvk3m" path="res://Player/Drill/drill.gd" id="1_jqk7l"]
-[ext_resource type="Texture2D" uid="uid://ryxirpqp251p" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0003_Drill.png" id="2_jqk7l"]
+[ext_resource type="Texture2D" uid="uid://burwl356q8h7j" path="res://Player/Drill/Assets/Drill_Player.png" id="2_jqk7l"]
 
 [node name="Drill" type="Area2D"]
 collision_layer = 0

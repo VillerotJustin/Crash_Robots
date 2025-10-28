@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmaxyswlehhd1"
-path="res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0001s_0004_Piece-Du-Vaisseau-1.png-b4b91b5c72bd875747ccfe027787da03.ctex"
+uid="uid://catfx2lkmo1mw"
+path="res://.godot/imported/Ship_Part_1.png-b8c72c63963d0da52c0085385ed89b69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0001s_0004_Piece-Du-Vaisseau-1.png"
-dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0001s_0004_Piece-Du-Vaisseau-1.png-b4b91b5c72bd875747ccfe027787da03.ctex"]
+source_file="res://World/Collectible/Assets/Ship_Part_1.png"
+dest_files=["res://.godot/imported/Ship_Part_1.png-b8c72c63963d0da52c0085385ed89b69.ctex"]
 
 [params]
 

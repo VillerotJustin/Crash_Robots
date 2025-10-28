@@ -24,10 +24,14 @@ var input_direction = Vector2.ZERO
 var last_hit: float
 var spawn_point: Vector2
 
+@export_category("Upgrades")
+@export var drilling: bool = false
+@export var gunning: bool = false
+@export var dashing: bool = false
 
 @export_category("Drill")
 @export var drill: Drill
-@export var distance_from_center: float = 1.5
+@export var distance_from_center: float = 50
 
 @export_category("Animation")
 @export var Animator:AnimatedSprite2D
@@ -48,9 +52,10 @@ func get_movement_input():
 		input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 		velocity = input_direction * SPEED
 	
-	if Input.is_action_just_pressed("dash"):
+	if Input.is_action_just_pressed("dash") and dashing:
 		velocity *= Dash_mult
 		set_collision_layer_value(5, false) # Disable dashable_gap collision
+	
 	if velocity.length()>0:
 		Animator.play("walk")
 	else:
@@ -98,10 +103,15 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 	# Shooting
-	shooting()
+	if gunning:
+		shooting()
 	
 	# Drill
-	process_drill()
+	if drilling:
+		process_drill()
+	
+	# Update Baterry HUD
+	HUD.update_battery(battery_timer.time_left)
 
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
@@ -129,7 +139,7 @@ func _on_battery_timeout() -> void:
 	battery_timer.stop()
 
 
-func _on_hit_box_body_entered(body: Node2D) -> void:
+func _on_hit_box_body_entered(_body: Node2D) -> void:
 		print("hit")
 		if Time.get_unix_time_from_system()-hit_cooldown > last_hit:
 			print("Hit detected")
