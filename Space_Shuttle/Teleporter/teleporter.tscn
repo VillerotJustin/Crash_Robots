@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://bhabco77hpcn1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cpgqv"]
+size = Vector2(120, 120)
 
 [node name="Teleporter" type="Area2D"]
 

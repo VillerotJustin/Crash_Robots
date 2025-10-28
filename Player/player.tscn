@@ -8,11 +8,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_btcbx"]
 size = Vector2(16, 32)
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("player_center", "drill")]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("player_center", "battery_timer", "drill")]
 collision_mask = 27
 script = ExtResource("1_l8h54")
 Bullet_Packed_Scene = ExtResource("2_btcbx")
 player_center = NodePath("PlayerCenter")
+battery_timer = NodePath("Battery")
 drill = NodePath("Drill")
 distance_from_center = 20.0
 
