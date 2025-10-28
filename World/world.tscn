@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://dikmmdqpc2pql"]
+[gd_scene load_steps=21 format=4 uid="uid://dikmmdqpc2pql"]
 
 [ext_resource type="Script" uid="uid://bygd5eyxn4m2y" path="res://World/world.gd" id="1_8a836"]
 [ext_resource type="PackedScene" uid="uid://cexrt4fx30nos" path="res://Enemy/enemy.tscn" id="2_0wqet"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://bplw1ef4yivnp" path="res://Space_Shuttle/space_shuttle.tscn" id="10_h2aik"]
 [ext_resource type="PackedScene" uid="uid://bhabco77hpcn1" path="res://Space_Shuttle/Teleporter/teleporter.tscn" id="11_0wqet"]
 [ext_resource type="Texture2D" uid="uid://cb5jxjr7apten" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0008_Vaisseau-Cassé.png" id="12_awrha"]
+[ext_resource type="Texture2D" uid="uid://00w8cehyxycc" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_0001s_0005_Brillance-Autour-Des-Upgrades HD/Robot_Le_Jeu_Asset_0009_Panneau.png" id="14_f23eu"]
+[ext_resource type="Texture2D" uid="uid://cx2ulvgcwa82r" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_0001s_0005_Brillance-Autour-Des-Upgrades HD/Robot_Le_Jeu_Asset_0008_Calque-20.png" id="15_oeat8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k8do8"]
 texture = ExtResource("6_eidgh")
@@ -234,3 +236,15 @@ curve = SubResource("Curve2D_f23eu")
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_2/Path2D"]
 position = Vector2(-1, -1)
 rotation = -2.129436
+
+[node name="Décors" type="Node" parent="."]
+
+[node name="RobotLeJeuAsset0009Panneau" type="Sprite2D" parent="."]
+position = Vector2(1082.25, 831)
+scale = Vector2(0.28333333, 0.24789916)
+texture = ExtResource("14_f23eu")
+
+[node name="RobotLeJeuAsset0008Calque20" type="Sprite2D" parent="."]
+position = Vector2(853, 472)
+scale = Vector2(0.3442623, 0.3449198)
+texture = ExtResource("15_oeat8")
