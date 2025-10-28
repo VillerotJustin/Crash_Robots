@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmwupovosbo67"]
+[gd_scene load_steps=15 format=3 uid="uid://bmwupovosbo67"]
 
 [ext_resource type="Script" uid="uid://dfnlnueh40eft" path="res://Player/player.gd" id="1_l8h54"]
 [ext_resource type="PackedScene" uid="uid://brwd67tms5gu5" path="res://Player/Bullet/bullet.tscn" id="2_btcbx"]
 [ext_resource type="Texture2D" uid="uid://docoxihtrk0i8" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000_Robot.png" id="3_gwnis"]
 [ext_resource type="PackedScene" uid="uid://lakgih1sq308" path="res://Player/Drill/drill.tscn" id="4_gwnis"]
+[ext_resource type="Texture2D" uid="uid://bcg6gbqbrj83y" path="res://Player/robot_idle.png" id="5_fhl08"]
+[ext_resource type="Texture2D" uid="uid://xykldj0mrmgl" path="res://Player/robot_walk.png" id="6_vtle1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_btcbx"]
-size = Vector2(16, 32)
+size = Vector2(21, 10)
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("player_center", "battery_timer", "drill")]
 collision_mask = 27
@@ -21,13 +23,13 @@ distance_from_center = 20.0
 texture = ExtResource("3_gwnis")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 11)
 shape = SubResource("RectangleShape2D_btcbx")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="PlayerCenter" type="Marker2D" parent="."]
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(3, -6)
 rect = Rect2(-8, -16, 16, 32)
 
 [node name="DashDuration" type="Timer" parent="."]
@@ -41,6 +43,11 @@ monitoring = false
 
 [node name="Battery" type="Timer" parent="."]
 wait_time = 60.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dkpta")
+animation = &"walk"
+frame_progress = 0.5441139
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
 [connection signal="timeout" from="DashDuration" to="." method="_on_dash_end"]
