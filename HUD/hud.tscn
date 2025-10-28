@@ -11,7 +11,26 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_h61sl")
 
-[node name="HSlider" type="HSlider" parent="."]
-layout_mode = 0
-offset_right = 8.0
+[node name="Top_HUD" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
 offset_bottom = 16.0
+grow_horizontal = 2
+
+[node name="HSlider" type="HSlider" parent="Top_HUD"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 60.0
+editable = false
+scrollable = false
+
+[node name="Bonuses" type="HBoxContainer" parent="Top_HUD"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSlider" type="HSlider" parent="Top_HUD/Bonuses"]
+layout_mode = 2
+max_value = 60.0
+editable = false
+scrollable = false
