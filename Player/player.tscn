@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dfnlnueh40eft" path="res://Player/player.gd" id="1_l8h54"]
 [ext_resource type="PackedScene" uid="uid://brwd67tms5gu5" path="res://Player/Bullet/bullet.tscn" id="2_btcbx"]
+[ext_resource type="Texture2D" uid="uid://docoxihtrk0i8" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000_Robot.png" id="3_gwnis"]
 [ext_resource type="PackedScene" uid="uid://lakgih1sq308" path="res://Player/Drill/drill.tscn" id="4_gwnis"]
 [ext_resource type="Texture2D" uid="uid://bcg6gbqbrj83y" path="res://Player/robot_idle.png" id="5_fhl08"]
 [ext_resource type="Texture2D" uid="uid://xykldj0mrmgl" path="res://Player/robot_walk.png" id="6_vtle1"]
@@ -9,76 +10,17 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_btcbx"]
 size = Vector2(21, 10)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_od3ui"]
-atlas = ExtResource("5_fhl08")
-region = Rect2(0, 0, 80, 120)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_00tjw"]
-atlas = ExtResource("5_fhl08")
-region = Rect2(80, 0, 80, 120)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x3vf3"]
-atlas = ExtResource("5_fhl08")
-region = Rect2(160, 0, 80, 120)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_apopc"]
-atlas = ExtResource("5_fhl08")
-region = Rect2(240, 0, 80, 120)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5htga"]
-atlas = ExtResource("6_vtle1")
-region = Rect2(0, 0, 80, 120)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p5o4e"]
-atlas = ExtResource("6_vtle1")
-region = Rect2(80, 0, 80, 120)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gu6f8"]
-atlas = ExtResource("6_vtle1")
-region = Rect2(160, 0, 80, 120)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_dkpta"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_od3ui")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_00tjw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x3vf3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_apopc")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5htga")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p5o4e")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gu6f8")
-}],
-"loop": true,
-"name": &"walk",
-"speed": 5.0
-}]
-
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("player_center", "drill", "Animator")]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("player_center", "battery_timer", "drill")]
 collision_mask = 27
 script = ExtResource("1_l8h54")
 Bullet_Packed_Scene = ExtResource("2_btcbx")
 player_center = NodePath("PlayerCenter")
+battery_timer = NodePath("Battery")
 drill = NodePath("Drill")
 distance_from_center = 20.0
-Animator = NodePath("AnimatedSprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_gwnis")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, 11)

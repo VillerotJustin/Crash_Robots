@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Player
+
 @export_category("Pistol")
 @export var Bullet_Packed_Scene: PackedScene = ResourceLoader.load("res://Player/Bullet/bullet.tscn")
 @export var player_center: Marker2D
@@ -15,6 +17,8 @@ var last_fire: float
 @export var main_camera: G_camera
 var is_dashing:bool = false
 var input_direction = Vector2.ZERO
+@export var battery_timer:Timer
+var spawn_point: Vector2
 
 @export_category("Drill")
 @export var drill: Drill
@@ -26,6 +30,10 @@ var input_direction = Vector2.ZERO
 func _ready() -> void:
 	if Animator==null:
 		Animator=$AnimatedSprite2D
+	if battery_timer == null:
+		battery_timer = $Battery
+		
+	spawn_point = global_position
 	# TODO check / auto fill references
 
 func get_movement_input():
@@ -113,6 +121,17 @@ func _on_dash_end() -> void:
 	is_dashing = false
 	set_collision_layer_value(5, true)
 
+func stop_battery_timer():
+	print("stop_timer")
+	battery_timer.stop()
+
+func start_battery_timer():
+	print("start_timer")
+	battery_timer.start(60)
 
 func _on_battery_timeout() -> void:
-	pass # Replace with function body.
+	print("timer end")
+	# TODO make return animation sequence and stuff
+	
+	 # TP spawnpoint
+	global_position = spawn_point
