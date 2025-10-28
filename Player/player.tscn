@@ -1,32 +1,93 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmwupovosbo67"]
+[gd_scene load_steps=15 format=3 uid="uid://bmwupovosbo67"]
 
 [ext_resource type="Script" uid="uid://dfnlnueh40eft" path="res://Player/player.gd" id="1_l8h54"]
-[ext_resource type="Texture2D" uid="uid://cx3d4vcw828q4" path="res://Player/Assets/MC_Placeholder.png" id="2_4ntmi"]
 [ext_resource type="PackedScene" uid="uid://brwd67tms5gu5" path="res://Player/Bullet/bullet.tscn" id="2_btcbx"]
 [ext_resource type="PackedScene" uid="uid://lakgih1sq308" path="res://Player/Drill/drill.tscn" id="4_gwnis"]
+[ext_resource type="Texture2D" uid="uid://bcg6gbqbrj83y" path="res://Player/robot_idle.png" id="5_fhl08"]
+[ext_resource type="Texture2D" uid="uid://xykldj0mrmgl" path="res://Player/robot_walk.png" id="6_vtle1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_btcbx"]
-size = Vector2(16, 32)
+size = Vector2(21, 10)
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("player_center", "drill")]
+[sub_resource type="AtlasTexture" id="AtlasTexture_od3ui"]
+atlas = ExtResource("5_fhl08")
+region = Rect2(0, 0, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00tjw"]
+atlas = ExtResource("5_fhl08")
+region = Rect2(80, 0, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3vf3"]
+atlas = ExtResource("5_fhl08")
+region = Rect2(160, 0, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apopc"]
+atlas = ExtResource("5_fhl08")
+region = Rect2(240, 0, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5htga"]
+atlas = ExtResource("6_vtle1")
+region = Rect2(0, 0, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5o4e"]
+atlas = ExtResource("6_vtle1")
+region = Rect2(80, 0, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gu6f8"]
+atlas = ExtResource("6_vtle1")
+region = Rect2(160, 0, 80, 120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dkpta"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_od3ui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00tjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3vf3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apopc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5htga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5o4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gu6f8")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("player_center", "drill", "Animator")]
 collision_mask = 27
 script = ExtResource("1_l8h54")
 Bullet_Packed_Scene = ExtResource("2_btcbx")
 player_center = NodePath("PlayerCenter")
 drill = NodePath("Drill")
 distance_from_center = 20.0
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_4ntmi")
+Animator = NodePath("AnimatedSprite2D")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 11)
 shape = SubResource("RectangleShape2D_btcbx")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="PlayerCenter" type="Marker2D" parent="."]
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(3, -6)
 rect = Rect2(-8, -16, 16, 32)
 
 [node name="DashDuration" type="Timer" parent="."]
@@ -40,6 +101,11 @@ monitoring = false
 
 [node name="Battery" type="Timer" parent="."]
 wait_time = 60.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dkpta")
+animation = &"walk"
+frame_progress = 0.5441139
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
 [connection signal="timeout" from="DashDuration" to="." method="_on_dash_end"]

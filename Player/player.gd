@@ -20,8 +20,12 @@ var input_direction = Vector2.ZERO
 @export var drill: Drill
 @export var distance_from_center: float = 1.5
 
+@export_category("Animation")
+@export var Animator:AnimatedSprite2D
+
 func _ready() -> void:
-	pass
+	if Animator==null:
+		Animator=$AnimatedSprite2D
 	# TODO check / auto fill references
 
 func get_movement_input():
@@ -32,7 +36,10 @@ func get_movement_input():
 	if Input.is_action_just_pressed("dash"):
 		velocity *= Dash_mult
 		set_collision_layer_value(5, false) # Disable dashable_gap collision
-	
+	if velocity.length()>0:
+		Animator.play("walk")
+	else:
+		Animator.play("idle")
 	
 func shooting():
 	if Time.get_unix_time_from_system()-fire_rate < last_fire:
