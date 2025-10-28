@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7qge0h4qnrhk"
-path="res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0002_Yeux-De-Tir.png-64519cb1015fa6a4e99cab5535b0466d.ctex"
+uid="uid://bvwbymqgjf7it"
+path="res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0002s_0000_Frame1.png-4af01a223ffc61a0dd4991d8bc226961.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0002_Yeux-De-Tir.png"
-dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0002_Yeux-De-Tir.png-64519cb1015fa6a4e99cab5535b0466d.ctex"]
+source_file="res://Player/Assets/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0002s_0000_Frame1.png"
+dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0002s_0000_Frame1.png-4af01a223ffc61a0dd4991d8bc226961.ctex"]
 
 [params]
 

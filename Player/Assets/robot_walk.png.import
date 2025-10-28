@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcg6gbqbrj83y"
-path="res://.godot/imported/robot_idle.png-008fc998ca429090e6d259b43336c385.ctex"
+uid="uid://xykldj0mrmgl"
+path="res://.godot/imported/robot_walk.png-bda60ed6dddec2972bd0df6eb1ef5b33.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/robot_idle.png"
-dest_files=["res://.godot/imported/robot_idle.png-008fc998ca429090e6d259b43336c385.ctex"]
+source_file="res://Player/Assets/robot_walk.png"
+dest_files=["res://.godot/imported/robot_walk.png-bda60ed6dddec2972bd0df6eb1ef5b33.ctex"]
 
 [params]
 

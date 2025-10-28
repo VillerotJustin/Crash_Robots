@@ -1,9 +1,72 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmwupovosbo67"]
+[gd_scene load_steps=15 format=3 uid="uid://bmwupovosbo67"]
 
 [ext_resource type="Script" uid="uid://dfnlnueh40eft" path="res://Player/player.gd" id="1_l8h54"]
-[ext_resource type="Texture2D" uid="uid://cx3d4vcw828q4" path="res://Player/Assets/MC_Placeholder.png" id="2_4ntmi"]
 [ext_resource type="PackedScene" uid="uid://brwd67tms5gu5" path="res://Player/Bullet/bullet.tscn" id="2_btcbx"]
+[ext_resource type="Texture2D" uid="uid://bcg6gbqbrj83y" path="res://Player/Assets/robot_idle.png" id="3_k53q1"]
+[ext_resource type="Texture2D" uid="uid://xykldj0mrmgl" path="res://Player/Assets/robot_walk.png" id="4_fhl08"]
 [ext_resource type="PackedScene" uid="uid://lakgih1sq308" path="res://Player/Drill/drill.tscn" id="4_gwnis"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtle1"]
+atlas = ExtResource("3_k53q1")
+region = Rect2(0, 0, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_od3ui"]
+atlas = ExtResource("3_k53q1")
+region = Rect2(80, 0, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00tjw"]
+atlas = ExtResource("3_k53q1")
+region = Rect2(160, 0, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3vf3"]
+atlas = ExtResource("3_k53q1")
+region = Rect2(240, 0, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apopc"]
+atlas = ExtResource("4_fhl08")
+region = Rect2(0, 0, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5htga"]
+atlas = ExtResource("4_fhl08")
+region = Rect2(80, 0, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5o4e"]
+atlas = ExtResource("4_fhl08")
+region = Rect2(160, 0, 80, 120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gu6f8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtle1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_od3ui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00tjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3vf3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apopc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5htga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5o4e")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_btcbx"]
 size = Vector2(16, 32)
@@ -17,8 +80,9 @@ battery_timer = NodePath("Battery")
 drill = NodePath("Drill")
 distance_from_center = 20.0
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_4ntmi")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gu6f8")
+animation = &"walk"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_btcbx")
