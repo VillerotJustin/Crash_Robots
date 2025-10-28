@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://74ed5amv2ggg"
-path="res://.godot/imported/Herbe.png-d694916840abae528c5f367701bca53a.ctex"
+uid="uid://b0mxi5yls7ss8"
+path="res://.godot/imported/Robot_Le_Jeu_Asset_0005s_0000_Roche1.png-179f6b9da11094da74e868fff0c388df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Herbe.png"
-dest_files=["res://.godot/imported/Herbe.png-d694916840abae528c5f367701bca53a.ctex"]
+source_file="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_0001s_0005_Brillance-Autour-Des-Upgrades HD/Robot_Le_Jeu_Asset_0005s_0000_Roche1.png"
+dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_0005s_0000_Roche1.png-179f6b9da11094da74e868fff0c388df.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsup845k8e38t"
-path="res://.godot/imported/Tuiles.png-63b1f1fa9b7fec3b56d558eee3f2bed9.ctex"
+uid="uid://beto46fmyws1d"
+path="res://.godot/imported/Robot_Le_Jeu_Asset_0001_Bullet.png-299dcabf83b8845fd1a25ed7130041a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tuiles.png"
-dest_files=["res://.godot/imported/Tuiles.png-63b1f1fa9b7fec3b56d558eee3f2bed9.ctex"]
+source_file="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_0001s_0005_Brillance-Autour-Des-Upgrades HD/Robot_Le_Jeu_Asset_0001_Bullet.png"
+dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_0001_Bullet.png-299dcabf83b8845fd1a25ed7130041a3.ctex"]
 
 [params]
 
