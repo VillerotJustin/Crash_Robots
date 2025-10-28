@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xydu478q6b3p"
-path="res://.godot/imported/Robot_Le_Jeu_Asset_0000s_0005_Machine-À-Robot.png-07d5030205d67cbde4416bfe246807af.ctex"
+uid="uid://busdesgl7oldu"
+path="res://.godot/imported/Battery_bar.png-5fb522cc0d7a3895bac8d6c672b9eef0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_0001s_0005_Brillance-Autour-Des-Upgrades HD/Robot_Le_Jeu_Asset_0000s_0005_Machine-À-Robot.png"
-dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_0000s_0005_Machine-À-Robot.png-07d5030205d67cbde4416bfe246807af.ctex"]
+source_file="res://HUD/Assets/Battery_bar.png"
+dest_files=["res://.godot/imported/Battery_bar.png-5fb522cc0d7a3895bac8d6c672b9eef0.ctex"]
 
 [params]
 

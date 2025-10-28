@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfsq1l3dima26"
-path="res://.godot/imported/Robot_Le_Jeu_Asset_0000s_0000s_0000_Calque-54.png-877dde681c2e66e35e9be95239020dfd.ctex"
+uid="uid://xykldj0mrmgl"
+path="res://.godot/imported/robot_walk.png-bda60ed6dddec2972bd0df6eb1ef5b33.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_0001s_0005_Brillance-Autour-Des-Upgrades HD/Robot_Le_Jeu_Asset_0000s_0000s_0000_Calque-54.png"
-dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_0000s_0000s_0000_Calque-54.png-877dde681c2e66e35e9be95239020dfd.ctex"]
+source_file="res://Player/Assets/robot_walk.png"
+dest_files=["res://.godot/imported/robot_walk.png-bda60ed6dddec2972bd0df6eb1ef5b33.ctex"]
 
 [params]
 

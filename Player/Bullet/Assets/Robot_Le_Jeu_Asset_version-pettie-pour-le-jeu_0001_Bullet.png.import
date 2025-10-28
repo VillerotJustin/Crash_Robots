@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rx0lrtyvjjpl"
-path="res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0002s_0001_Frame2.png-f5ff4e29062ad2caa9412d4d88fa18ec.ctex"
+uid="uid://cul5815ifxpl8"
+path="res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0001_Bullet.png-cf5c7471588b0e314269091cbbdd68ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0002s_0001_Frame2.png"
-dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0002s_0001_Frame2.png-f5ff4e29062ad2caa9412d4d88fa18ec.ctex"]
+source_file="res://Player/Bullet/Assets/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0001_Bullet.png"
+dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0001_Bullet.png-cf5c7471588b0e314269091cbbdd68ab.ctex"]
 
 [params]
 

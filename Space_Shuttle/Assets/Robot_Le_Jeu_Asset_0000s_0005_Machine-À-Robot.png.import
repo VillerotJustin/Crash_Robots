@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cul5815ifxpl8"
-path="res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0001_Bullet.png-0478e3a870c3f2cc6acb5ddff7985568.ctex"
+uid="uid://xydu478q6b3p"
+path="res://.godot/imported/Robot_Le_Jeu_Asset_0000s_0005_Machine-À-Robot.png-fbe4a2f23b9dd996c5cc914048e2cfb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0001_Bullet.png"
-dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0001_Bullet.png-0478e3a870c3f2cc6acb5ddff7985568.ctex"]
+source_file="res://Space_Shuttle/Assets/Robot_Le_Jeu_Asset_0000s_0005_Machine-À-Robot.png"
+dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_0000s_0005_Machine-À-Robot.png-fbe4a2f23b9dd996c5cc914048e2cfb9.ctex"]
 
 [params]
 

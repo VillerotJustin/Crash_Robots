@@ -1,0 +1,108 @@
+[gd_scene load_steps=15 format=3 uid="uid://bplw1ef4yivnp"]
+
+[ext_resource type="Script" uid="uid://wlgbtu2dwe6q" path="res://Space_Shuttle/space_shuttle.gd" id="1_eu2k5"]
+[ext_resource type="Texture2D" uid="uid://xydu478q6b3p" path="res://Space_Shuttle/Assets/Robot_Le_Jeu_Asset_0000s_0005_Machine-À-Robot.png" id="3_5hjwo"]
+[ext_resource type="Texture2D" uid="uid://dfsq1l3dima26" path="res://Space_Shuttle/Assets/Robot_Le_Jeu_Asset_0000s_0000s_0000_Calque-54.png" id="3_k0l8j"]
+[ext_resource type="Texture2D" uid="uid://brtbc5kl3adkx" path="res://Space_Shuttle/Assets/Robot_Le_Jeu_Asset_0000s_0004_Tete-De-Robot-.png" id="4_8qcov"]
+[ext_resource type="Texture2D" uid="uid://dasglttrmiu01" path="res://Space_Shuttle/Assets/Robot_Le_Jeu_Asset_0000s_0002_Astronaute.png" id="4_k0l8j"]
+[ext_resource type="Texture2D" uid="uid://beddmt3n78jt1" path="res://Space_Shuttle/Assets/Robot_Le_Jeu_Asset_0000s_0003_Bras-De-Robot.png" id="5_ngsdk"]
+[ext_resource type="Texture2D" uid="uid://cmah1lvidlsoc" path="res://Space_Shuttle/Assets/Robot_Le_Jeu_Asset_0000s_0007_Calque-63.png" id="7_ky1rd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_acjt7"]
+size = Vector2(51, 1082)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05ieu"]
+size = Vector2(1563, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0l8j"]
+size = Vector2(628.5, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_02tuv"]
+size = Vector2(332, 765)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_druk8"]
+size = Vector2(166, 191.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tstf"]
+size = Vector2(92.65628, 176.13847)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vuxud"]
+size = Vector2(433, 227.5)
+
+[node name="Space_Shuttle" type="StaticBody2D"]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_eu2k5")
+
+[node name="Wall" type="CollisionShape2D" parent="."]
+position = Vector2(806, -59)
+shape = SubResource("RectangleShape2D_acjt7")
+
+[node name="Wall_1" type="CollisionShape2D" parent="."]
+position = Vector2(-809, -66)
+shape = SubResource("RectangleShape2D_acjt7")
+
+[node name="Wall_2" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, -623)
+shape = SubResource("RectangleShape2D_05ieu")
+
+[node name="Wall_3" type="CollisionShape2D" parent="."]
+position = Vector2(-458.25, 507)
+shape = SubResource("RectangleShape2D_k0l8j")
+
+[node name="Wall_4" type="CollisionShape2D" parent="."]
+position = Vector2(476, 503)
+shape = SubResource("RectangleShape2D_k0l8j")
+
+[node name="Shuttle_BG" type="Sprite2D" parent="."]
+z_index = -5
+texture = ExtResource("3_k0l8j")
+
+[node name="Robot_Maker" type="StaticBody2D" parent="Shuttle_BG"]
+z_index = 1
+position = Vector2(-532, -215)
+
+[node name="Maker" type="Sprite2D" parent="Shuttle_BG/Robot_Maker"]
+texture = ExtResource("3_5hjwo")
+
+[node name="Robot_part_1" type="Sprite2D" parent="Shuttle_BG/Robot_Maker"]
+position = Vector2(-21, 231)
+texture = ExtResource("4_8qcov")
+
+[node name="Robot_part_2" type="Sprite2D" parent="Shuttle_BG/Robot_Maker"]
+position = Vector2(-21, 462)
+texture = ExtResource("5_ngsdk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shuttle_BG/Robot_Maker"]
+position = Vector2(-23, 191.5)
+shape = SubResource("RectangleShape2D_02tuv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Shuttle_BG/Robot_Maker"]
+position = Vector2(-18, -284.75)
+shape = SubResource("RectangleShape2D_druk8")
+
+[node name="Astronaute" type="StaticBody2D" parent="Shuttle_BG"]
+z_index = 1
+position = Vector2(518.185, -260.72)
+scale = Vector2(0.75, 0.75)
+
+[node name="Astronaute" type="Sprite2D" parent="Shuttle_BG/Astronaute"]
+z_index = 1
+texture = ExtResource("4_k0l8j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shuttle_BG/Astronaute"]
+z_index = 1
+position = Vector2(-4.587036, 111.444244)
+shape = SubResource("RectangleShape2D_0tstf")
+
+[node name="Console" type="StaticBody2D" parent="Shuttle_BG"]
+position = Vector2(428.4, -503)
+scale = Vector2(1.38, 1.38)
+
+[node name="Sprite2D" type="Sprite2D" parent="Shuttle_BG/Console"]
+scale = Vector2(0.5228013, 0.5228013)
+texture = ExtResource("7_ky1rd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shuttle_BG/Console"]
+position = Vector2(31, 34)
+shape = SubResource("RectangleShape2D_vuxud")

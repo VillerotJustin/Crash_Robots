@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brtbc5kl3adkx"
-path="res://.godot/imported/Robot_Le_Jeu_Asset_0000s_0004_Tete-De-Robot-.png-ef2445cf118e247c2e008d22b23dd065.ctex"
+uid="uid://rx0lrtyvjjpl"
+path="res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0002s_0001_Frame2.png-8fee329711c31cb4bdbb460dc0077b86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_0001s_0005_Brillance-Autour-Des-Upgrades HD/Robot_Le_Jeu_Asset_0000s_0004_Tete-De-Robot-.png"
-dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_0000s_0004_Tete-De-Robot-.png-ef2445cf118e247c2e008d22b23dd065.ctex"]
+source_file="res://Player/Assets/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0002s_0001_Frame2.png"
+dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0002s_0001_Frame2.png-8fee329711c31cb4bdbb460dc0077b86.ctex"]
 
 [params]
 
