@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://brwd67tms5gu5"]
 
 [ext_resource type="Script" uid="uid://cb1wdriueyqyw" path="res://Player/Bullet/bullet.gd" id="1_xjflv"]
-[ext_resource type="Texture2D" uid="uid://jne7evqrmkvx" path="res://Player/Bullet/Assets/Bullet_Placeholder.png" id="2_bx8u8"]
+[ext_resource type="Texture2D" uid="uid://bvwbymqgjf7it" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0002s_0000_Frame1.png" id="2_bx8u8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cshf5"]
 
