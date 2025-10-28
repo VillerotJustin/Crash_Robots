@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dasglttrmiu01"
-path="res://.godot/imported/Robot_Le_Jeu_Asset_0000s_0002_Astronaute.png-9973ab084500598e66e946f2f8706125.ctex"
+uid="uid://beddmt3n78jt1"
+path="res://.godot/imported/Robot_Le_Jeu_Asset_0000s_0003_Bras-De-Robot.png-233baa69295a8ea42b1601d2aa3e5525.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_0001s_0005_Brillance-Autour-Des-Upgrades HD/Robot_Le_Jeu_Asset_0000s_0002_Astronaute.png"
-dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_0000s_0002_Astronaute.png-9973ab084500598e66e946f2f8706125.ctex"]
+source_file="res://Space_Shuttle/Assets/Robot_Le_Jeu_Asset_0000s_0003_Bras-De-Robot.png"
+dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_0000s_0003_Bras-De-Robot.png-233baa69295a8ea42b1601d2aa3e5525.ctex"]
 
 [params]
 
