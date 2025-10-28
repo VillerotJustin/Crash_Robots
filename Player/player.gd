@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var bullet_spawn_distance: float = 10
 @export var bullet_speed: float = 500.0
 @export var fire_rate: float = 0.5
+@export var bullet_damage: float = 1.0
 var last_fire: float
 
 @export_category("Mouvement")
@@ -61,7 +62,7 @@ func shooting():
 		
 		var bullet: Bullet = Bullet_Packed_Scene.instantiate()
 		bullet.position = player_center.global_position + shooting_direction * bullet_spawn_distance
-		bullet.initialize(bullet_speed , shooting_direction)
+		bullet.initialize(bullet_speed , shooting_direction, bullet_damage)
 		
 		get_tree().current_scene.add_child(bullet)
 		
@@ -104,4 +105,7 @@ func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 func _on_dash_end() -> void:
 	is_dashing = false
 	set_collision_layer_value(5, true)
-	
+
+
+func _on_battery_timeout() -> void:
+	pass # Replace with function body.
