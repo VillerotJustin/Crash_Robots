@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ryxirpqp251p"
-path="res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0003_Drill.png-e370a0c99cd75b6e6cb3b73644a1341b.ctex"
+uid="uid://burwl356q8h7j"
+path="res://.godot/imported/Drill_Player.png-c26505444bedaf2152b1ee9860bf8802.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0003_Drill.png"
-dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0003_Drill.png-e370a0c99cd75b6e6cb3b73644a1341b.ctex"]
+source_file="res://Player/Drill/Assets/Drill_Player.png"
+dest_files=["res://.godot/imported/Drill_Player.png-c26505444bedaf2152b1ee9860bf8802.ctex"]
 
 [params]
 

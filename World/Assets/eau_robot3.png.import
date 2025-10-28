@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7wgq2uveswpr"
-path="res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0001s_0005_Brillance-Autour-Des-Upgrades.png-59a9b6fb699738e94b7758433085c8b7.ctex"
+uid="uid://dxfr1ciwwqkld"
+path="res://.godot/imported/eau_robot3.png-3efa307960dea4fca90ca76877f3a1a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0001s_0005_Brillance-Autour-Des-Upgrades.png"
-dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0001s_0005_Brillance-Autour-Des-Upgrades.png-59a9b6fb699738e94b7758433085c8b7.ctex"]
+source_file="res://World/Assets/eau_robot3.png"
+dest_files=["res://.godot/imported/eau_robot3.png-3efa307960dea4fca90ca76877f3a1a1.ctex"]
 
 [params]
 
