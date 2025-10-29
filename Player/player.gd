@@ -23,11 +23,21 @@ var input_direction = Vector2.ZERO
 @export var hit_cooldown: float = 1.0
 var last_hit: float
 var spawn_point: Vector2
+var body_sprite: String = "res://Player/Assets/Robot_Mort.png"
 
+@export_category("Upgrades")
+@export var drilling: bool = false
+@export var gunning: bool = false
+@export var dashing: bool = false
+@export var Ship_Part_1: bool = false
+@export var Ship_Part_2: bool = false
+@export var Ship_Part_3: bool = false
+@export var Ship_Part_4: bool = false
+@export var Ship_Part_5: bool = false
 
 @export_category("Drill")
 @export var drill: Drill
-@export var distance_from_center: float = 1.5
+@export var distance_from_center: float = 50
 
 @export_category("Animation")
 @export var Animator:AnimatedSprite2D
@@ -48,9 +58,10 @@ func get_movement_input():
 		input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 		velocity = input_direction * SPEED
 	
-	if Input.is_action_just_pressed("dash"):
+	if Input.is_action_just_pressed("dash") and dashing:
 		velocity *= Dash_mult
 		set_collision_layer_value(5, false) # Disable dashable_gap collision
+	
 	if velocity.length()>0:
 		Animator.play("walk")
 	else:
@@ -73,7 +84,6 @@ func shooting():
 		get_tree().current_scene.add_child(bullet)
 		
 		last_fire = Time.get_unix_time_from_system()
-	
 
 func process_drill():
 	if Input.is_action_pressed("drill") and input_direction != Vector2.ZERO:
@@ -90,7 +100,6 @@ func process_drill():
 	if Input.is_action_just_released("drill"):
 		drill.monitoring = false
 		drill.visible = false
-	
 
 func _physics_process(_delta: float) -> void:
 	# Moving the Character
@@ -98,19 +107,35 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 	# Shooting
-	shooting()
+	if gunning:
+		shooting()
 	
 	# Drill
-	process_drill()
-
+	if drilling:
+		process_drill()
+	
+	# Update Baterry HUD
+	HUD.update_battery(battery_timer.time_left)
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	main_camera.update_position(global_position)
 
-
 func _on_dash_end() -> void:
 	is_dashing = false
 	set_collision_layer_value(5, true)
+
+func collect_part(part_name: String):
+	match part_name:
+		"Part_1":
+			Ship_Part_1 = true
+		"Part_2":
+			Ship_Part_2 = true
+		"Part_3":
+			Ship_Part_3 = true
+		"Part_4":
+			Ship_Part_4 = true
+		"Part_5":
+			Ship_Part_5 = true
 
 func stop_battery_timer():
 	print("stop_timer")
@@ -120,16 +145,20 @@ func start_battery_timer():
 	print("start_timer")
 	battery_timer.start(60)
 
+# Death
 func _on_battery_timeout() -> void:
 	print("timer end")
 	# TODO make return animation sequence and stuff
+	var new_corpse: Sprite2D = Sprite2D.new()
+	new_corpse.texture = ResourceLoader.load(body_sprite)
+	get_tree().current_scene.add_child(new_corpse)
+	new_corpse.global_position = global_position
 	
 	 # TP spawnpoint
 	global_position = spawn_point
 	battery_timer.stop()
 
-
-func _on_hit_box_body_entered(body: Node2D) -> void:
+func _on_hit_box_body_entered(_body: Node2D) -> void:
 		print("hit")
 		if Time.get_unix_time_from_system()-hit_cooldown > last_hit:
 			print("Hit detected")

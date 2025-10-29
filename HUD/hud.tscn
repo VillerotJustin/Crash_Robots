@@ -1,36 +1,134 @@
-[gd_scene load_steps=2 format=3 uid="uid://bp7yl5o80ei2d"]
+[gd_scene load_steps=12 format=3 uid="uid://bp7yl5o80ei2d"]
 
-[ext_resource type="Script" uid="uid://dhwn52skbuoo" path="res://HUD/hud.gd" id="1_h61sl"]
+[ext_resource type="Script" uid="uid://6fidgk2p3fvd" path="res://HUD/hud_initializer.gd" id="1_jvmdh"]
+[ext_resource type="Texture2D" uid="uid://bspbyg2n6kyr5" path="res://HUD/Assets/Battery_bar_BG.png" id="2_mi5n8"]
+[ext_resource type="Texture2D" uid="uid://busdesgl7oldu" path="res://HUD/Assets/Battery_bar.png" id="2_yu8mg"]
+[ext_resource type="Texture2D" uid="uid://ryxirpqp251p" path="res://HUD/Assets/Drill_UI.png" id="4_jvmdh"]
+[ext_resource type="Texture2D" uid="uid://io6yq5b0kyov" path="res://HUD/Assets/Gun_UI.png" id="5_tnm0g"]
+[ext_resource type="Texture2D" uid="uid://cqnnvy3uq2ohy" path="res://HUD/Assets/dash_UI.png" id="6_ncsg0"]
+[ext_resource type="Texture2D" uid="uid://8eamut7lxy1u" path="res://HUD/Assets/Ship_Part_1_UI.png" id="7_q5vrg"]
+[ext_resource type="Texture2D" uid="uid://d3pyf0kfq7sm" path="res://HUD/Assets/Ship_Part_2_UI.png" id="8_03xa0"]
+[ext_resource type="Texture2D" uid="uid://d2uyfqrgnpsp2" path="res://HUD/Assets/Ship_Part_3_UI.png" id="9_5ac6t"]
+[ext_resource type="Texture2D" uid="uid://bmu642si2utwp" path="res://HUD/Assets/Ship_Part_4_UI.png" id="10_aayvn"]
+[ext_resource type="Texture2D" uid="uid://xhrrxhtkqvuj" path="res://HUD/Assets/Ship_Part_5_UI.png" id="11_ltn1w"]
 
-[node name="HUD" type="Control"]
-layout_mode = 3
+[node name="HUD" type="Container" node_paths=PackedStringArray("battery_bar", "drill_upgrade", "gun_upgrade", "dash_upgrade", "label", "label_clear_timer")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -960.0
+offset_bottom = -540.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_h61sl")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_jvmdh")
+battery_bar = NodePath("VBoxContainer/Top_HUD/TextureProgressBar")
+drill_upgrade = NodePath("VBoxContainer/Top_HUD/Bonuses/Upgrade_Drill")
+gun_upgrade = NodePath("VBoxContainer/Top_HUD/Bonuses/Upgrade_Gun")
+dash_upgrade = NodePath("VBoxContainer/Top_HUD/Bonuses/Upgrade_Dash")
+label = NodePath("VBoxContainer/Bottom_HUD/Label")
+label_clear_timer = NodePath("VBoxContainer/Bottom_HUD/Label/Timer")
 
-[node name="Top_HUD" type="HBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 16.0
-grow_horizontal = 2
-
-[node name="HSlider" type="HSlider" parent="Top_HUD"]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 2
 size_flags_horizontal = 3
-max_value = 60.0
-editable = false
-scrollable = false
+size_flags_vertical = 3
 
-[node name="Bonuses" type="HBoxContainer" parent="Top_HUD"]
+[node name="Top_HUD" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="VBoxContainer/Top_HUD"]
+custom_minimum_size = Vector2(500, 120)
+layout_mode = 2
+max_value = 60.0
+value = 60.0
+nine_patch_stretch = true
+texture_over = ExtResource("2_mi5n8")
+texture_progress = ExtResource("2_yu8mg")
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/Top_HUD"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="HSlider" type="HSlider" parent="Top_HUD/Bonuses"]
+[node name="Bonuses" type="HBoxContainer" parent="VBoxContainer/Top_HUD"]
 layout_mode = 2
-max_value = 60.0
-editable = false
-scrollable = false
+size_flags_horizontal = 3
+
+[node name="Upgrade_Drill" type="TextureRect" parent="VBoxContainer/Top_HUD/Bonuses"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_jvmdh")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Upgrade_Gun" type="TextureRect" parent="VBoxContainer/Top_HUD/Bonuses"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_tnm0g")
+stretch_mode = 4
+
+[node name="Upgrade_Dash" type="TextureRect" parent="VBoxContainer/Top_HUD/Bonuses"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("6_ncsg0")
+stretch_mode = 4
+
+[node name="Center_HUD" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Bottom_HUD" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Bottom_HUD"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="VBoxContainer/Bottom_HUD/Label"]
+wait_time = 5.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Bottom_HUD"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Ship_Part_1" type="TextureRect" parent="VBoxContainer/Bottom_HUD/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("7_q5vrg")
+stretch_mode = 4
+
+[node name="Ship_Part_2" type="TextureRect" parent="VBoxContainer/Bottom_HUD/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("8_03xa0")
+stretch_mode = 4
+
+[node name="Ship_Part_3" type="TextureRect" parent="VBoxContainer/Bottom_HUD/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("9_5ac6t")
+stretch_mode = 4
+
+[node name="Ship_Part_4" type="TextureRect" parent="VBoxContainer/Bottom_HUD/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("10_aayvn")
+stretch_mode = 4
+
+[node name="Ship_Part_5" type="TextureRect" parent="VBoxContainer/Bottom_HUD/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("11_ltn1w")
+stretch_mode = 4
