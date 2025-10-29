@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deiui3yxlx4cw"
-path="res://.godot/imported/Roche_3.png-708e4289d05ab2cb3a90fc8e30af74df.ctex"
+uid="uid://dckkvnt2lpvm7"
+path="res://.godot/imported/Robot_Le_Jeu_Asset-3.png-54be793b2c408ef032218d5b89278136.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Rock/Assets/Roche_3.png"
-dest_files=["res://.godot/imported/Roche_3.png-708e4289d05ab2cb3a90fc8e30af74df.ctex"]
+source_file="res://World/Rock/Assets/Robot_Le_Jeu_Asset-3.png"
+dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset-3.png-54be793b2c408ef032218d5b89278136.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://c47ejnu6tosco"]
+[gd_scene load_steps=28 format=4 uid="uid://1pu07ia7ssnm"]
 
 [ext_resource type="Script" uid="uid://cudtueshvd0ih" path="res://Worldaxel/world.gd" id="1_b30px"]
 [ext_resource type="PackedScene" uid="uid://cexrt4fx30nos" path="res://Enemy/enemy.tscn" id="2_jo7gg"]
@@ -93,7 +93,6 @@ bullet_speed = 600.0
 fire_rate = 0.4
 Dash_mult = 20.0
 main_camera = NodePath("../Camera")
-gunning = true
 dashing = true
 
 [node name="Space_Shuttle" parent="." node_paths=PackedStringArray("teleporter_inside", "teleporter_outside", "entry_point", "exit_point") instance=ExtResource("9_7rupm")]
@@ -527,7 +526,9 @@ position = Vector2(-1, -1)
 rotation = -2.129436
 
 [node name="collisions eau" type="StaticBody2D" parent="."]
+disable_mode = 2
 collision_layer = 16
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="collisions eau"]
 position = Vector2(-959, 299.5)

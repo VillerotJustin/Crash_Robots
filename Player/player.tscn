@@ -113,6 +113,7 @@ shape = SubResource("RectangleShape2D_btcbx")
 [node name="PlayerCenter" type="Marker2D" parent="."]
 
 [node name="DashDuration" type="Timer" parent="."]
+wait_time = 0.2
 
 [node name="Drill" parent="." instance=ExtResource("4_gwnis")]
 visible = false
