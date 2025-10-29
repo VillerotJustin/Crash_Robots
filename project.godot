@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Crash_Robots"
-run/main_scene="uid://cs3288a6ypsdb"
+run/main_scene="uid://dikmmdqpc2pql"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 

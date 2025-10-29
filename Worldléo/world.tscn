@@ -1,0 +1,103 @@
+[gd_scene load_steps=14 format=3 uid="uid://cyqgreq3li0c4"]
+
+[ext_resource type="Script" uid="uid://pisn844vm7q3" path="res://Worldléo/world.gd" id="1_gnc1t"]
+[ext_resource type="PackedScene" uid="uid://cexrt4fx30nos" path="res://Enemy/enemy.tscn" id="2_6lm7s"]
+[ext_resource type="PackedScene" uid="uid://du6xixuuc22tl" path="res://Worldléo/Layers/herbe_haute.tscn" id="3_vyxfe"]
+[ext_resource type="PackedScene" uid="uid://nqyuoah165m6" path="res://Worldléo/Layers/herbe.tscn" id="4_0reag"]
+[ext_resource type="PackedScene" uid="uid://b7qvjc13ahcw1" path="res://Worldléo/Layers/eau.tscn" id="5_s55tb"]
+[ext_resource type="PackedScene" uid="uid://ki5bewae55oj" path="res://Worldléo/Layers/mur.tscn" id="6_b0eb4"]
+[ext_resource type="PackedScene" uid="uid://cvyscull2tdmy" path="res://Camera/camera.tscn" id="7_fvbb4"]
+[ext_resource type="PackedScene" uid="uid://bplw1ef4yivnp" path="res://Space_Shuttle/space_shuttle.tscn" id="8_3322g"]
+[ext_resource type="PackedScene" uid="uid://bhabco77hpcn1" path="res://Space_Shuttle/Teleporter/teleporter.tscn" id="9_q2ns8"]
+[ext_resource type="Texture2D" uid="uid://cb5jxjr7apten" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0008_Vaisseau-Cassé.png" id="10_fmuu0"]
+[ext_resource type="PackedScene" uid="uid://bmwupovosbo67" path="res://Player/player.tscn" id="11_wwqjn"]
+
+[sub_resource type="Curve2D" id="Curve2D_awrha"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1, -1, 101.81818, -48.484844, -101.81818, 48.484844, -145, -20, 30.78948, -2.7368426, -30.78948, 2.7368426, -341, -13, -43.447376, -35.578953, 43.447376, 35.578953, -354, 55, 0, 0, 0, 0, -8, 63, 0, 0, 0, 0, -1, -1)
+}
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_f23eu"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1, -1, 101.81818, -48.484844, -101.81818, 48.484844, -145, -20, 30.78948, -2.7368426, -30.78948, 2.7368426, -330, 1, -43.447376, -35.578953, 43.447376, 35.578953, -354, 55, 0, 0, 0, 0, -8, 63, 0, 0, 0, 0, -1, -1)
+}
+point_count = 6
+
+[node name="World" type="Node2D" node_paths=PackedStringArray("enemy_spawn_points")]
+script = ExtResource("1_gnc1t")
+enemy_spawn_points = [NodePath("Enemies/Enemie_spawn_1"), NodePath("Enemies/Enemie_spawn_2")]
+enemy_scene = ExtResource("2_6lm7s")
+
+[node name="Environment" type="Node2D" parent="."]
+z_index = -1
+
+[node name="HerbeHaute" parent="Environment" instance=ExtResource("3_vyxfe")]
+
+[node name="Herbe" parent="Environment" instance=ExtResource("4_0reag")]
+
+[node name="Eau" parent="Environment" instance=ExtResource("5_s55tb")]
+
+[node name="Mur" parent="Environment" instance=ExtResource("6_b0eb4")]
+
+[node name="Camera" parent="." instance=ExtResource("7_fvbb4")]
+position = Vector2(960, -3781)
+
+[node name="Space_Shuttle" parent="." node_paths=PackedStringArray("teleporter_inside", "teleporter_outside", "entry_point", "exit_point") instance=ExtResource("8_3322g")]
+position = Vector2(999, -3773)
+scale = Vector2(0.3, 0.3)
+teleporter_inside = NodePath("Teleporter_OUT")
+teleporter_outside = NodePath("Teleporter_IN")
+entry_point = NodePath("Marker_IN")
+exit_point = NodePath("Marker_OUT")
+
+[node name="Marker_IN" type="Marker2D" parent="Space_Shuttle"]
+position = Vector2(-6.666992, 213.33301)
+scale = Vector2(3.3333333, 3.3333333)
+
+[node name="Marker_OUT" type="Marker2D" parent="Space_Shuttle"]
+position = Vector2(-959.99994, 14403.332)
+scale = Vector2(3.3333333, 3.3333333)
+
+[node name="Teleporter_IN" parent="Space_Shuttle" instance=ExtResource("9_q2ns8")]
+position = Vector2(3.3333335, 533.3333)
+scale = Vector2(2.1, 1)
+
+[node name="Teleporter_OUT" parent="Space_Shuttle" instance=ExtResource("9_q2ns8")]
+z_index = 2
+position = Vector2(-960, 14006.666)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0008VaisseauCassé" type="Sprite2D" parent="."]
+position = Vector2(779, 385)
+texture = ExtResource("10_fmuu0")
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemie_spawn_1" type="Marker2D" parent="Enemies"]
+position = Vector2(-770, 240)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_1"]
+curve = SubResource("Curve2D_awrha")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_1/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_2" type="Marker2D" parent="Enemies"]
+position = Vector2(-770, 577)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_2"]
+curve = SubResource("Curve2D_f23eu")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_2/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Ysort" type="Node2D" parent="."]
+
+[node name="Player" parent="Ysort" node_paths=PackedStringArray("main_camera") instance=ExtResource("11_wwqjn")]
+position = Vector2(1119, -3706)
+bullet_speed = 600.0
+fire_rate = 0.4
+Dash_mult = 20.0
+main_camera = NodePath("../../Camera")
