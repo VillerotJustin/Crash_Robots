@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mptj7206n1k0"
-path="res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0011_Robot-Mort.png-3c0719b8dfc2a0ea255e68eed6165717.ctex"
+path="res://.godot/imported/Robot_Mort.png-b9abddd0e076f3879bedadadff886763.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0011_Robot-Mort.png"
-dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0011_Robot-Mort.png-3c0719b8dfc2a0ea255e68eed6165717.ctex"]
+source_file="res://Player/Assets/Robot_Mort.png"
+dest_files=["res://.godot/imported/Robot_Mort.png-b9abddd0e076f3879bedadadff886763.ctex"]
 
 [params]
 
