@@ -97,16 +97,16 @@ position = Vector2(413.33334, 14096.667)
 position = Vector2(1190, 368)
 texture = ExtResource("10_xyg6t")
 
-[node name="Ysort" type="Node2D" parent="."]
-y_sort_enabled = true
-
-[node name="Player" parent="Ysort" node_paths=PackedStringArray("main_camera") instance=ExtResource("11_j0ty1")]
+[node name="Player" parent="." node_paths=PackedStringArray("main_camera") instance=ExtResource("11_j0ty1")]
 y_sort_enabled = true
 position = Vector2(1119, -3706)
 bullet_speed = 600.0
 fire_rate = 0.4
 Dash_mult = 20.0
-main_camera = NodePath("../../Camera")
+main_camera = NodePath("../Camera")
+
+[node name="Ysort" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="RigidBody2D" type="RigidBody2D" parent="Ysort"]
 y_sort_enabled = true
@@ -192,6 +192,7 @@ position = Vector2(788, 796.25)
 shape = SubResource("RectangleShape2D_sikru")
 
 [node name="arbres" type="Node2D" parent="Ysort"]
+visible = false
 position = Vector2(2, 0)
 
 [node name="ResolutionJeuGameJaqm(1)0000Calque57" type="Sprite2D" parent="Ysort/arbres"]

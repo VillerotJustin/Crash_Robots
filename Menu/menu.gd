@@ -9,7 +9,7 @@ extends Control
 
 var current_story: int = 0
 
-@export var Scene_Path: String = "res://Worldaxel/worldaxel.tscn"
+@export var Scene_Path: String = "res://World/world.gd"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
