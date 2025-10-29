@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://dijn32q74xh2c"]
+
+[ext_resource type="Texture2D" uid="uid://dadv8if4up3ol" path="res://Player/Assets/resolution_jeu_game_jam-1.png" id="1_hxd2h"]
+[ext_resource type="Texture2D" uid="uid://bcddakhw62p0i" path="res://Player/Assets/resolution_jeu_game_jam-2.png" id="2_eayh0"]
+[ext_resource type="Texture2D" uid="uid://eph8nu5v8ffo" path="res://Player/Assets/resolution_jeu_game_jam-3.png" id="3_4go6j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqmyn"]
+atlas = ExtResource("1_hxd2h")
+region = Rect2(0, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dftsj"]
+atlas = ExtResource("2_eayh0")
+region = Rect2(0, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1icda"]
+atlas = ExtResource("3_4go6j")
+region = Rect2(0, 0, 1920, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eaadj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqmyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dftsj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1icda")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(963, 519)
+sprite_frames = SubResource("SpriteFrames_eaadj")
+frame_progress = 0.07624547
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
