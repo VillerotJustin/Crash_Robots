@@ -28,6 +28,11 @@ var spawn_point: Vector2
 @export var drilling: bool = false
 @export var gunning: bool = false
 @export var dashing: bool = false
+@export var Ship_Part_1: bool = false
+@export var Ship_Part_2: bool = false
+@export var Ship_Part_3: bool = false
+@export var Ship_Part_4: bool = false
+@export var Ship_Part_5: bool = false
 
 @export_category("Drill")
 @export var drill: Drill
@@ -78,7 +83,6 @@ func shooting():
 		get_tree().current_scene.add_child(bullet)
 		
 		last_fire = Time.get_unix_time_from_system()
-	
 
 func process_drill():
 	if Input.is_action_pressed("drill") and input_direction != Vector2.ZERO:
@@ -95,7 +99,6 @@ func process_drill():
 	if Input.is_action_just_released("drill"):
 		drill.monitoring = false
 		drill.visible = false
-	
 
 func _physics_process(_delta: float) -> void:
 	# Moving the Character
@@ -113,14 +116,25 @@ func _physics_process(_delta: float) -> void:
 	# Update Baterry HUD
 	HUD.update_battery(battery_timer.time_left)
 
-
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	main_camera.update_position(global_position)
-
 
 func _on_dash_end() -> void:
 	is_dashing = false
 	set_collision_layer_value(5, true)
+
+func collect_part(part_name: String):
+	match part_name:
+		"Part_1":
+			Ship_Part_1 = true
+		"Part_2":
+			Ship_Part_2 = true
+		"Part_3":
+			Ship_Part_3 = true
+		"Part_4":
+			Ship_Part_4 = true
+		"Part_5":
+			Ship_Part_5 = true
 
 func stop_battery_timer():
 	print("stop_timer")
@@ -137,7 +151,6 @@ func _on_battery_timeout() -> void:
 	 # TP spawnpoint
 	global_position = spawn_point
 	battery_timer.stop()
-
 
 func _on_hit_box_body_entered(_body: Node2D) -> void:
 		print("hit")

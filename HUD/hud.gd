@@ -4,6 +4,13 @@ var battery_bar: TextureProgressBar
 var drill_upgrade: TextureRect
 var gun_upgrade: TextureRect
 var dash_upgrade: TextureRect
+var Part_1: TextureRect
+var Part_2: TextureRect
+var Part_3: TextureRect
+var Part_4: TextureRect
+var Part_5: TextureRect
+var label: Label
+var label_clear_timer: Timer
 
 # Called when the node enters the scene tree for the first time.
 func init() -> void:
@@ -17,6 +24,13 @@ func init() -> void:
 	drill_upgrade.visible = false
 	gun_upgrade.visible = false
 	dash_upgrade.visible = false
+	Part_1.visible = false
+	Part_2.visible = false
+	Part_3.visible = false
+	Part_4.visible = false
+	Part_5.visible = false
+	
+	label_clear_timer.connect("timeout", clear_label)
 
 
 # 🔋 Update the battery bar value (0–60)
@@ -34,5 +48,21 @@ func toggle_upgrade(upgrade_name: String, state: bool) -> void:
 			gun_upgrade.visible = state
 		"dash":
 			dash_upgrade.visible = state
+		"part_1":
+			Part_1.visible = state
+		"part_2":
+			Part_2.visible = state
+		"part_3":
+			Part_3.visible = state
+		"part_4":
+			Part_4.visible = state
+		"part_5":
+			Part_5.visible = state
 		_:
 			push_warning("Unknown upgrade: %s" % upgrade_name)
+
+func show_message(message:String):
+	label.text = message
+
+func clear_label():
+	label.text = ""

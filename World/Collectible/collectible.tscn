@@ -1,5 +1,21 @@
-[gd_scene format=3 uid="uid://cebybcbhangh4"]
+[gd_scene load_steps=4 format=3 uid="uid://cebybcbhangh4"]
 
-[node name="Collectible" type="Area2D"]
+[ext_resource type="Texture2D" uid="uid://cmaxyswlehhd1" path="res://World/Collectible/Assets/Ship_Part_5.png" id="1_ltnrs"]
+[ext_resource type="Script" uid="uid://bvxajlrolhnnd" path="res://World/Collectible/collectible.gd" id="1_vjy4l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vjy4l"]
+size = Vector2(55, 59)
+
+[node name="Collectible" type="Area2D" node_paths=PackedStringArray("sprite")]
+collision_layer = 0
+script = ExtResource("1_vjy4l")
+sprite = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ltnrs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_vjy4l")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
