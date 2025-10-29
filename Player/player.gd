@@ -4,6 +4,8 @@ class_name Player
 
 @onready var collider: CollisionShape2D = $CollisionShape2D2
 
+@export var winned_scene: String = "res://Menu/winned.tscn"
+
 @export_category("Pistol")
 @export var Bullet_Packed_Scene: PackedScene = ResourceLoader.load("res://Player/Bullet/bullet.tscn")
 @export var player_center: Marker2D
@@ -155,6 +157,8 @@ func collect_part(part_name: String):
 			Ship_Part_4 = true
 		"Part_5":
 			Ship_Part_5 = true
+	if Ship_Part_1 and Ship_Part_2 and Ship_Part_3 and Ship_Part_4 and Ship_Part_5:
+		win()
 
 func stop_battery_timer():
 	print("stop_timer")
@@ -191,3 +195,6 @@ func _on_hit_box_body_entered(_body: Node2D) -> void:
 				print("Battery empty!")
 
 			print("New time left:", remaining)
+
+func win() -> void:
+	get_tree().change_scene_to_file(winned_scene)
