@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b8teb857778hj"
+path="res://.godot/imported/intro jeu.wav-6a7bf4d0231861a4b6cde8c7563d9fff.sample"
+
+[deps]
+
+source_file="res://sons/intro jeu.wav"
+dest_files=["res://.godot/imported/intro jeu.wav-6a7bf4d0231861a4b6cde8c7563d9fff.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
