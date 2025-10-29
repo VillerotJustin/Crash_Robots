@@ -23,6 +23,7 @@ var input_direction = Vector2.ZERO
 @export var hit_cooldown: float = 1.0
 var last_hit: float
 var spawn_point: Vector2
+var body_sprite: String = "res://Player/Assets/Robot_Mort.png"
 
 @export_category("Upgrades")
 @export var drilling: bool = false
@@ -144,9 +145,14 @@ func start_battery_timer():
 	print("start_timer")
 	battery_timer.start(60)
 
+# Death
 func _on_battery_timeout() -> void:
 	print("timer end")
 	# TODO make return animation sequence and stuff
+	var new_corpse: Sprite2D = Sprite2D.new()
+	new_corpse.texture = ResourceLoader.load(body_sprite)
+	get_tree().current_scene.add_child(new_corpse)
+	new_corpse.global_position = global_position
 	
 	 # TP spawnpoint
 	global_position = spawn_point
