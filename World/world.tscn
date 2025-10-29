@@ -44,13 +44,6 @@ tile_map_data = PackedByteArray("AAAEAAIAAAACAAQAAAAFAAIAAAACAAQAAAAFAAMAAAACAAQ
 [node name="Camera" parent="." instance=ExtResource("3_j8job")]
 position = Vector2(960, -3781)
 
-[node name="Player" parent="." node_paths=PackedStringArray("main_camera") instance=ExtResource("3_3f78f")]
-position = Vector2(1119, -3706)
-bullet_speed = 600.0
-fire_rate = 0.4
-Dash_mult = 20.0
-main_camera = NodePath("../Camera")
-
 [node name="Space_Shuttle" parent="." node_paths=PackedStringArray("teleporter_inside", "teleporter_outside", "entry_point", "exit_point") instance=ExtResource("10_h2aik")]
 position = Vector2(999, -3773)
 scale = Vector2(0.3, 0.3)
@@ -100,3 +93,12 @@ curve = SubResource("Curve2D_f23eu")
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_2/Path2D"]
 position = Vector2(-1, -1)
 rotation = -2.129436
+
+[node name="Ysort" type="Node2D" parent="."]
+
+[node name="Player" parent="Ysort" node_paths=PackedStringArray("main_camera") instance=ExtResource("3_3f78f")]
+position = Vector2(1119, -3706)
+bullet_speed = 600.0
+fire_rate = 0.4
+Dash_mult = 20.0
+main_camera = NodePath("../../Camera")
