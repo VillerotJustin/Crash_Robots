@@ -1,0 +1,1993 @@
+[gd_scene load_steps=32 format=3 uid="uid://nroppbpeylf"]
+
+[ext_resource type="Script" uid="uid://pisn844vm7q3" path="res://Worldléo/world.gd" id="1_gu4em"]
+[ext_resource type="PackedScene" uid="uid://cexrt4fx30nos" path="res://Enemy/enemy.tscn" id="2_seve4"]
+[ext_resource type="PackedScene" uid="uid://du6xixuuc22tl" path="res://Worldléo/Layers/herbe_haute.tscn" id="3_51878"]
+[ext_resource type="PackedScene" uid="uid://nqyuoah165m6" path="res://Worldléo/Layers/herbe.tscn" id="4_26q2t"]
+[ext_resource type="PackedScene" uid="uid://b7qvjc13ahcw1" path="res://Worldléo/Layers/eau.tscn" id="5_qb0uf"]
+[ext_resource type="PackedScene" uid="uid://ki5bewae55oj" path="res://Worldléo/Layers/mur.tscn" id="6_sikru"]
+[ext_resource type="PackedScene" uid="uid://cvyscull2tdmy" path="res://Camera/camera.tscn" id="7_u55o2"]
+[ext_resource type="PackedScene" uid="uid://bplw1ef4yivnp" path="res://Space_Shuttle/space_shuttle.tscn" id="8_52wsp"]
+[ext_resource type="PackedScene" uid="uid://bhabco77hpcn1" path="res://Space_Shuttle/Teleporter/teleporter.tscn" id="9_qj5jx"]
+[ext_resource type="Texture2D" uid="uid://cb5jxjr7apten" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0008_Vaisseau-Cassé.png" id="10_xyg6t"]
+[ext_resource type="PackedScene" uid="uid://bmwupovosbo67" path="res://Player/player.tscn" id="11_j0ty1"]
+[ext_resource type="Texture2D" uid="uid://i6upy608cpst" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0003s_0000_Buisson1.png" id="12_d4owb"]
+[ext_resource type="Texture2D" uid="uid://b3fvtle8mngd" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0005_Calque-20.png" id="12_u55o2"]
+[ext_resource type="Texture2D" uid="uid://ierajf4gv1d4" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0003s_0001_Buisson-2.png" id="13_sikru"]
+[ext_resource type="Texture2D" uid="uid://dfyk0doa8faca" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0003s_0002_Buisson-3.png" id="14_u55o2"]
+[ext_resource type="Texture2D" uid="uid://du7tvf4d16hup" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0004s_0000_Arbre-1.png" id="15_52wsp"]
+[ext_resource type="Texture2D" uid="uid://bktktn6yn86mb" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0004s_0001_Arbre-2.png" id="16_qj5jx"]
+[ext_resource type="Texture2D" uid="uid://dn3vqs4ps1dko" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0004s_0002_Arbre-3.png" id="17_xyg6t"]
+[ext_resource type="Texture2D" uid="uid://bo5yj24a43hdi" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/resolution_jeu_game_jaqm-(1)_0000_Calque-2.png" id="19_ptqw3"]
+[ext_resource type="Texture2D" uid="uid://cwtvqqi1v4lk5" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/resolution_jeu_game_jaqm-(1)_0001_Calque-3.png" id="20_ifgli"]
+[ext_resource type="Texture2D" uid="uid://3t4estersmkl" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/resolution_jeu_game_jaqm-(1)_0002_Calque-4.png" id="21_wyptj"]
+[ext_resource type="Texture2D" uid="uid://cci1vsuh0tdhs" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/resolution_jeu_game_jaqm-(1)_0003_Calque-5.png" id="22_aatsp"]
+[ext_resource type="Texture2D" uid="uid://bfonkdiufumld" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/resolution_jeu_game_jaqm-(1)_0004_Calque-6.png" id="23_sbhae"]
+[ext_resource type="Texture2D" uid="uid://b5bd4o4n8o11" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/resolution_jeu_game_jaqm-(1)_0005_Calque-14.png" id="24_miwxp"]
+[ext_resource type="Texture2D" uid="uid://ddre5o0tbe1ns" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/resolution_jeu_game_jaqm-(1)_0006_Calque-8.png" id="25_mvx2k"]
+[ext_resource type="Texture2D" uid="uid://bwedppr236ajg" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/resolution_jeu_game_jaqm-(1)_0007_Calque-9.png" id="26_qkwq6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u55o2"]
+size = Vector2(156, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_52wsp"]
+size = Vector2(78, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sikru"]
+size = Vector2(19.75, 29.5)
+
+[sub_resource type="Curve2D" id="Curve2D_ptqw3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1, -1, 101.81818, -48.484844, -101.81818, 48.484844, -145, -20, 30.78948, -2.7368426, -30.78948, 2.7368426, -341, -13, -43.447376, -35.578953, 43.447376, 35.578953, -354, 55, 0, 0, 0, 0, -8, 63, 0, 0, 0, 0, -1, -1)
+}
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_ifgli"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1, -1, 101.81818, -48.484844, -101.81818, 48.484844, -145, -20, 30.78948, -2.7368426, -30.78948, 2.7368426, -330, 1, -43.447376, -35.578953, 43.447376, 35.578953, -354, 55, 0, 0, 0, 0, -8, 63, 0, 0, 0, 0, -1, -1)
+}
+point_count = 6
+
+[node name="World" type="Node2D" node_paths=PackedStringArray("enemy_spawn_points")]
+script = ExtResource("1_gu4em")
+enemy_spawn_points = [NodePath(""), NodePath("")]
+enemy_scene = ExtResource("2_seve4")
+
+[node name="Environment" type="Node2D" parent="."]
+z_index = -1
+
+[node name="HerbeHaute" parent="Environment" instance=ExtResource("3_51878")]
+
+[node name="Herbe" parent="Environment" instance=ExtResource("4_26q2t")]
+
+[node name="Eau" parent="Environment" instance=ExtResource("5_qb0uf")]
+
+[node name="Mur" parent="Environment" instance=ExtResource("6_sikru")]
+
+[node name="Camera" parent="." instance=ExtResource("7_u55o2")]
+position = Vector2(960, -3781)
+
+[node name="Space_Shuttle" parent="." node_paths=PackedStringArray("teleporter_inside", "teleporter_outside", "entry_point", "exit_point") instance=ExtResource("8_52wsp")]
+position = Vector2(999, -3773)
+scale = Vector2(0.3, 0.3)
+teleporter_inside = NodePath("Teleporter_OUT")
+teleporter_outside = NodePath("Teleporter_IN")
+entry_point = NodePath("Marker_IN")
+exit_point = NodePath("Marker_OUT")
+
+[node name="Marker_IN" type="Marker2D" parent="Space_Shuttle"]
+position = Vector2(-6.666992, 213.33301)
+scale = Vector2(3.3333333, 3.3333333)
+
+[node name="Marker_OUT" type="Marker2D" parent="Space_Shuttle"]
+position = Vector2(413.3333, 14210)
+scale = Vector2(3.3333333, 3.3333333)
+
+[node name="Teleporter_IN" parent="Space_Shuttle" instance=ExtResource("9_qj5jx")]
+position = Vector2(3.3333335, 533.3333)
+scale = Vector2(2.1, 1)
+
+[node name="Teleporter_OUT" parent="Space_Shuttle" instance=ExtResource("9_qj5jx")]
+z_index = 2
+position = Vector2(413.33334, 14096.667)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0008VaisseauCassé" type="Sprite2D" parent="."]
+position = Vector2(1190, 368)
+texture = ExtResource("10_xyg6t")
+
+[node name="Ysort" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Player" parent="Ysort" node_paths=PackedStringArray("main_camera") instance=ExtResource("11_j0ty1")]
+y_sort_enabled = true
+position = Vector2(1119, -3706)
+bullet_speed = 600.0
+fire_rate = 0.4
+Dash_mult = 20.0
+main_camera = NodePath("../../Camera")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Ysort"]
+y_sort_enabled = true
+position = Vector2(1245, 477.5)
+scale = Vector2(0.9999994, 0.9999994)
+gravity_scale = 0.0
+
+[node name="barrière" type="Sprite2D" parent="Ysort/RigidBody2D"]
+y_sort_enabled = true
+position = Vector2(-1.0000005, -2.4999905)
+scale = Vector2(1.0162795, 1.0477283)
+texture = ExtResource("12_u55o2")
+offset = Vector2(0, -14.575)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/RigidBody2D"]
+position = Vector2(-4.000244, 2.6874695)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_u55o2")
+
+[node name="barrière2" type="Sprite2D" parent="Ysort"]
+y_sort_enabled = true
+position = Vector2(979, 455.00003)
+scale = Vector2(1.0162789, 1.0477277)
+texture = ExtResource("12_u55o2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/barrière2"]
+position = Vector2(-0.00012207031, 20.699524)
+scale = Vector2(0.98398155, 0.95444614)
+shape = SubResource("RectangleShape2D_u55o2")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson1" type="Sprite2D" parent="Ysort"]
+position = Vector2(1086, 791)
+texture = ExtResource("12_d4owb")
+offset = Vector2(0, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson1"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_52wsp")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0003s0001Buisson2" type="Sprite2D" parent="Ysort"]
+position = Vector2(1286, 794)
+texture = ExtResource("13_sikru")
+offset = Vector2(0, -18.84)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0001Buisson2"]
+position = Vector2(2, -4)
+shape = SubResource("RectangleShape2D_52wsp")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson3" type="Sprite2D" parent="Ysort"]
+position = Vector2(1188, 793)
+texture = ExtResource("14_u55o2")
+offset = Vector2(0, -22.185)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson3"]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_52wsp")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre1" type="Sprite2D" parent="Ysort"]
+position = Vector2(623, 711)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre1"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_sikru")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre2" type="Sprite2D" parent="Ysort"]
+position = Vector2(954, 706)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre2"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_sikru")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre3" type="Sprite2D" parent="Ysort"]
+position = Vector2(791, 786)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Ysort"]
+position = Vector2(788, 796.25)
+shape = SubResource("RectangleShape2D_sikru")
+
+[node name="arbres" type="Node2D" parent="Ysort"]
+position = Vector2(2, 0)
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque57" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3817, -1626)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque58" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4008, -1316)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque79" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4342, -1235)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque80" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4342, -1235)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque59" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3394, -1284)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque2" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(651, 1008)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque7" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3708, -930)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque6" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(97, 2997)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque3" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5796, 726)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque4" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5423, -1107)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque5" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1894, 977)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque4" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3457, -943)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque50" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-3872, 2061)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque16" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4114, -939)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque109" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3814, -1922)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque5" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(2565, -1119.5)
+scale = Vector2(0.6878981, 0.80421686)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0002Calque4" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1988, 1097)
+texture = ExtResource("21_wyptj")
+
+[node name="ResolutionJeuGameJaqm(1)0002Calque5" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(2097, 2962)
+texture = ExtResource("21_wyptj")
+
+[node name="ResolutionJeuGameJaqm(1)0002Calque6" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(7006, 1985)
+texture = ExtResource("21_wyptj")
+
+[node name="ResolutionJeuGameJaqm(1)0002Calque7" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3439, -1562)
+texture = ExtResource("21_wyptj")
+
+[node name="ResolutionJeuGameJaqm(1)0002Calque13" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3705, -1281)
+texture = ExtResource("21_wyptj")
+
+[node name="ResolutionJeuGameJaqm(1)0002Calque8" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1946, -1150)
+texture = ExtResource("21_wyptj")
+
+[node name="ResolutionJeuGameJaqm(1)0002Calque9" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-3910, -129)
+texture = ExtResource("21_wyptj")
+
+[node name="ResolutionJeuGameJaqm(1)0002Calque10" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-4488, 1913)
+texture = ExtResource("21_wyptj")
+
+[node name="ResolutionJeuGameJaqm(1)0002Calque11" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1258, 807)
+texture = ExtResource("21_wyptj")
+
+[node name="ResolutionJeuGameJaqm(1)0002Calque12" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1844, 3259)
+texture = ExtResource("21_wyptj")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque6" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-9, -1140)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque7" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3553, 2179)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0003Calque5" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1914, 19)
+texture = ExtResource("22_aatsp")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque3" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(729, 2099)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque15" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1921, 2035)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque8" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-4088, -1047)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque9" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4275, -1925)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque17" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4067, 122)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque10" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(7044, 1142)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque11" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(726, 3016)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque14" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-449, 3273)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque12" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-3839, 998)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque13" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5358, 1979)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque6" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4, 150)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque8" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-664, 2065)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque9" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1916, 2106)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque10" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(318, 3007)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque11" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3913, -952)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque8" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4666, -918)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque18" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4415, -931)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque19" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3852, 122)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque12" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4871, -940)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque71" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5500, -943)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque73" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5217, -961)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque9" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5233, 121)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque20" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(6999, -1232)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque21" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5639, 112)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque13" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4232, -1513)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque10" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3000, 3058)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque22" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(2749, 3045)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque23" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3406, 3049)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque116" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3406, 3049)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque117" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3609, 2595)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque118" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3782, 2738)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque119" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3782, 2738)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque120" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(7083, 1335)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque121" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(6970, 1622)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque122" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(7286, 1765)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque14" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3205, 3036)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque11" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1254, 2075)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque24" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1003, 2062)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque25" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1660, 2066)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque15" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1459, 2053)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque12" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2954, 2071)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque26" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-3205, 2058)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque27" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2548, 2062)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque16" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2749, 2049)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque13" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5160, 3237)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque28" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5411, 3224)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque29" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-4754, 3228)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque17" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-4955, 3215)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque14" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-3704, 3306)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque30" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-3955, 3293)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque31" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-3298, 3297)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque18" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-3499, 3284)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque15" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2742, 3343)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque32" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2993, 3330)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque33" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2336, 3334)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque19" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2537, 3321)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque16" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1331, 3335)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque34" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1582, 3322)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque35" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-925, 3326)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque20" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1126, 3313)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque17" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(222, 3237)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque36" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-29, 3224)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque37" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(628, 3228)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque21" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(427, 3215)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque18" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(320, 2324)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque38" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(69, 2311)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque39" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(726, 2315)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque22" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(525, 2302)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque19" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(2322, 3250)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque40" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(2071, 3237)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque41" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(2728, 3241)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque23" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(2527, 3228)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque20" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3288, 3254)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque42" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3037, 3241)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque43" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3694, 3245)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque24" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3493, 3232)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque21" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4209, 3278)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque44" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3958, 3265)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque45" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4615, 3269)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque25" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4414, 3256)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque22" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5077, 3339)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque46" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4826, 3326)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque47" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5483, 3330)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque26" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5282, 3317)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque23" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5990, 3339)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque48" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5739, 3326)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque49" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(6396, 3330)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque27" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(6195, 3317)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque24" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(6920, 3327)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque50" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(6669, 3314)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque51" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(7326, 3318)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque28" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(7125, 3305)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque25" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(7262, -69)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque52" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(7011, -82)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque123" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(7387, 1094)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque53" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(7668, -78)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque29" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(7467, -91)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque26" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(6010, -77)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque54" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5759, -90)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque55" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(6416, -86)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque30" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(6215, -99)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque27" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5191, 1014)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque56" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4940, 1001)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque57" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5597, 1005)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque124" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(7364, 1286)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque125" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(7531, 2187)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque31" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5396, 992)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque28" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4198, 1036)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque58" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3947, 1023)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque59" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4604, 1027)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque32" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4403, 1014)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque29" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4035, 1215)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque60" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3784, 1202)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque61" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4441, 1206)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque33" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4240, 1193)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque30" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-648, -2112)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque62" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-899, -2125)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque63" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-242, -2121)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque34" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-443, -2134)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque31" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1533, -2128)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque64" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1784, -2141)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque65" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1127, -2137)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque35" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1328, -2150)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque32" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2396, -2133)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque66" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2647, -2146)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque67" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1990, -2142)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque36" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2191, -2155)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque33" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-3221, -2149)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque68" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-3472, -2162)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque69" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2815, -2158)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque37" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-3016, -2171)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque34" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-4073, -2230)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque70" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-4324, -2243)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque71" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-3667, -2239)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque38" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-3868, -2252)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque35" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-4958, -2230)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque72" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5209, -2243)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque73" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-4552, -2239)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque39" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-4753, -2252)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque36" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5848, -2230)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque74" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-6099, -2243)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque75" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5442, -2239)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque40" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5643, -2252)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque37" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5544, -1139)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque76" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5795, -1152)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque77" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5138, -1148)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque41" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5339, -1161)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque38" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5484, -75)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque78" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5735, -88)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque79" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5078, -84)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque42" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5279, -97)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque39" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5560, 989)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque80" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5811, 976)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque81" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5154, 980)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque43" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5355, 967)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque60" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5550, 2062)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque126" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5801, 2049)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque127" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5144, 2053)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque128" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-4496, 2050)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque129" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-4210, 1911)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque130" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-4195, 2073)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque131" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-4195, 2066)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque72" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-5345, 2040)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque40" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(268, -2250)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque82" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(17, -2263)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque83" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(674, -2259)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque44" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(473, -2272)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque41" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1223, -2239)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque84" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(972, -2252)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque85" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1629, -2248)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque45" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1428, -2261)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque42" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(2319, -2250)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque86" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(2068, -2263)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque87" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(2725, -2259)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque46" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(2524, -2272)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque43" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3703, -2245)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque88" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3452, -2258)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque89" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4109, -2254)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque47" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3908, -2267)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque81" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(6014, -1630)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque132" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5763, -1643)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque133" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(6420, -1639)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque74" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(6219, -1652)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque82" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(6249, -2222)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque134" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5998, -2235)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque135" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(6655, -2231)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque75" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(6454, -2244)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque44" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5109, -2142)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque90" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4858, -2155)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque110" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4552, -2196)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque111" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5465, -1637)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque112" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5465, -1637)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque113" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(6939, -1602)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque114" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1967, -1645)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque115" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1914, -691)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque91" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5515, -2151)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque48" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5314, -2164)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque45" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1886, -47)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque74" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-4157, -226)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque75" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-3924, -937)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque76" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-3826, -1995)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque77" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-4362, 984)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque92" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2142, -60)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque78" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-527, -1129)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque51" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(2321, 1163)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque49" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2669, -1140)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque101" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2925, -1153)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque100" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2263, -1149)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque64" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2464, -1172)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque48" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-3105, 1012)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque99" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-3361, 999)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque98" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2699, 1003)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque47" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-421, 854)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque97" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-677, 841)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque96" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-15, 845)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque63" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-216, 822)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque61" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-23, 1246)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque62" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1547, 977)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque60" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(6115, 706)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque59" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-142, 976)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque58" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3127, 179)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque57" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4356, 22)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque56" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-142, 976)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque55" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2900, 980)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque93" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1480, -56)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque53" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(519, -1132)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque54" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(6377, 917)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque52" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4804, 982)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque49" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1681, -79)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque51" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(227, -108)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque61" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4083, -1857)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque62" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3832, -251)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque63" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3325, 1003)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque64" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3325, 1188)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque65" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(4722, 2083)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque66" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5140, 2268)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque67" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(2388, 2047)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque68" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(705, 1707)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque69" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1605, 764)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque70" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1474, 1015)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque71" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5815, 2036)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque72" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(7234, -1533)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque73" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(7334, -1157)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque102" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-29, -121)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque103" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(633, -117)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque65" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(432, -140)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque52" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-481, -101)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque104" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-737, -114)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque66" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-276, -133)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque53" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1462, -1156)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque105" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1718, -1169)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque67" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-1257, -1188)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque54" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1483, -84)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque106" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1227, -97)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque68" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1688, -116)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque55" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1483, -84)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque107" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1227, -97)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque69" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1688, -116)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque56" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1523, -1145)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque108" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1267, -1158)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque70" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(1728, -1177)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0000Calque46" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2858, -67)
+texture = ExtResource("19_ptqw3")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque94" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-3109, -80)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0001Calque95" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2452, -76)
+texture = ExtResource("20_ifgli")
+
+[node name="ResolutionJeuGameJaqm(1)0004Calque50" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(-2653, -89)
+texture = ExtResource("23_sbhae")
+
+[node name="ResolutionJeuGameJaqm(1)0005Calque14" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(748, 1326)
+texture = ExtResource("24_miwxp")
+
+[node name="ResolutionJeuGameJaqm(1)0006Calque8" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(583, 1437)
+texture = ExtResource("25_mvx2k")
+
+[node name="ResolutionJeuGameJaqm(1)0006Calque9" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(3558.5, 1131.5)
+texture = ExtResource("25_mvx2k")
+
+[node name="ResolutionJeuGameJaqm(1)0006Calque10" type="Sprite2D" parent="Ysort/arbres"]
+position = Vector2(5422, -43)
+texture = ExtResource("25_mvx2k")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque9" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(1209, 571)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque10" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(1207, 1363.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque11" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(2019, 1627.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque13" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(1379, 2448.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque14" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(2191, 2712.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque15" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(2538, 561.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque16" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(3350, 825.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque17" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(2380, -692.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque18" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(3192, -428.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque19" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(537, -716.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque20" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(1349, -452.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque21" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-1367, 278.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque22" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-555, 542.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque23" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-1269, 1323.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque24" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-457, 1587.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque25" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-1454, 2475.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque26" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-642, 2739.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque27" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-3442, 2571.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque28" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-2630, 2835.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque29" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-5173, 2540.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque30" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-4361, 2804.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque31" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-5173, 2540.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque32" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-4361, 2804.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque33" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(1361, -1656.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque34" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-5161, 1336.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque35" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-4349, 1600.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque37" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-5186, 396.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque38" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-4374, 660.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque40" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-5342, -540.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque41" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-4530, -276.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque43" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-3486, -696.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque44" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-2674, -432.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque46" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-3367, -1731.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque47" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-2555, -1467.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque49" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-5254, -1743.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque50" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-4442, -1479.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque52" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-1468, -1768.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque53" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-656, -1504.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque55" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-1468, -1768.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque56" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(-656, -1504.5)
+texture = ExtResource("26_qkwq6")
+
+[node name="ResolutionJeuGameJaqm(1)0007Calque12" type="Sprite2D" parent="Ysort/arbres"]
+z_index = -1
+position = Vector2(397, 307)
+texture = ExtResource("26_qkwq6")
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemie_spawn_1" type="Marker2D" parent="Enemies"]
+position = Vector2(-1293, 1502)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_1"]
+curve = SubResource("Curve2D_ptqw3")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_1/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_2" type="Marker2D" parent="Enemies"]
+position = Vector2(-782, 1379)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_2"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_2/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_3" type="Marker2D" parent="Enemies"]
+position = Vector2(-1270, 1751)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_3"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_3/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_4" type="Marker2D" parent="Enemies"]
+position = Vector2(-823, 1600)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_4"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_4/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_7" type="Marker2D" parent="Enemies"]
+position = Vector2(-2752, -772)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_7"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_7/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_8" type="Marker2D" parent="Enemies"]
+position = Vector2(-2186, -681)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_8"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_8/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_9" type="Marker2D" parent="Enemies"]
+position = Vector2(-2698, -446)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_9"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_9/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_10" type="Marker2D" parent="Enemies"]
+position = Vector2(-2212, -371)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_10"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_10/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_11" type="Marker2D" parent="Enemies"]
+position = Vector2(-2566, 313)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_11"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_11/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_5" type="Marker2D" parent="Enemies"]
+position = Vector2(-846, 1821)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_5"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_5/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_6" type="Marker2D" parent="Enemies"]
+position = Vector2(-282, 1449)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_6"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_6/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_12" type="Marker2D" parent="Enemies"]
+position = Vector2(-4636, 1372)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_12"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_12/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_13" type="Marker2D" parent="Enemies"]
+position = Vector2(-4996, 1581)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_13"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_13/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_14" type="Marker2D" parent="Enemies"]
+position = Vector2(-4192, 1592)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_14"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_14/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_15" type="Marker2D" parent="Enemies"]
+position = Vector2(-2728, 2471)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_15"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_15/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_16" type="Marker2D" parent="Enemies"]
+position = Vector2(-2289, 2688)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_16"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_16/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_17" type="Marker2D" parent="Enemies"]
+position = Vector2(-2734, 2862)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_17"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_17/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_18" type="Marker2D" parent="Enemies"]
+position = Vector2(2509, 2423)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_18"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_18/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_19" type="Marker2D" parent="Enemies"]
+position = Vector2(3096, 2609)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_19"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_19/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_20" type="Marker2D" parent="Enemies"]
+position = Vector2(2565, 2675)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_20"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_20/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_21" type="Marker2D" parent="Enemies"]
+position = Vector2(3028, 1674)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_21"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_21/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_22" type="Marker2D" parent="Enemies"]
+position = Vector2(1175, -576)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_22"]
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_22/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_23" type="Marker2D" parent="Enemies"]
+position = Vector2(3608, 241)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_23"]
+position = Vector2(-0.2914734, 0)
+scale = Vector2(0.708501, 1)
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_23/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_24" type="Marker2D" parent="Enemies"]
+position = Vector2(3608, 355)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_24"]
+position = Vector2(-0.2914734, 0)
+scale = Vector2(0.708501, 1)
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_24/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_25" type="Marker2D" parent="Enemies"]
+position = Vector2(3616, 464)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_25"]
+position = Vector2(-0.2914734, 0)
+scale = Vector2(0.708501, 1)
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_25/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_26" type="Marker2D" parent="Enemies"]
+position = Vector2(6296, 1359)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_26"]
+position = Vector2(-0.2914734, 0)
+scale = Vector2(0.708501, 1)
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_26/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_27" type="Marker2D" parent="Enemies"]
+position = Vector2(6698, 1489)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_27"]
+position = Vector2(-0.2914734, 0)
+scale = Vector2(0.708501, 1)
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_27/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_28" type="Marker2D" parent="Enemies"]
+position = Vector2(6477, 1854)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_28"]
+position = Vector2(-0.2914734, 0)
+scale = Vector2(0.708501, 1)
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_28/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_29" type="Marker2D" parent="Enemies"]
+position = Vector2(7268, -760)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_29"]
+position = Vector2(-0.2914734, 0)
+scale = Vector2(0.708501, 1)
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_29/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_30" type="Marker2D" parent="Enemies"]
+position = Vector2(6654, -487)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_30"]
+position = Vector2(-0.2914734, 0)
+scale = Vector2(0.708501, 1)
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_30/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_31" type="Marker2D" parent="Enemies"]
+position = Vector2(6372, -767)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_31"]
+position = Vector2(-0.2914734, 0)
+scale = Vector2(0.708501, 1)
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_31/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_32" type="Marker2D" parent="Enemies"]
+position = Vector2(7338, -444)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_32"]
+position = Vector2(-0.2914734, 0)
+scale = Vector2(0.708501, 1)
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_32/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_33" type="Marker2D" parent="Enemies"]
+position = Vector2(6416, -320)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_33"]
+position = Vector2(-0.2914734, 0)
+scale = Vector2(0.708501, 1)
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_33/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_34" type="Marker2D" parent="Enemies"]
+position = Vector2(6886, -656)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_34"]
+position = Vector2(-0.2914734, 0)
+scale = Vector2(0.708501, 1)
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_34/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_35" type="Marker2D" parent="Enemies"]
+position = Vector2(4895, -1641)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_35"]
+position = Vector2(-0.2914734, 0)
+scale = Vector2(0.708501, 1)
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_35/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_36" type="Marker2D" parent="Enemies"]
+position = Vector2(4917, -1801)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_36"]
+position = Vector2(-0.2914734, 0)
+scale = Vector2(0.708501, 1)
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_36/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
+
+[node name="Enemie_spawn_37" type="Marker2D" parent="Enemies"]
+position = Vector2(4908, -1424)
+
+[node name="Path2D" type="Path2D" parent="Enemies/Enemie_spawn_37"]
+position = Vector2(-0.2914734, 0)
+scale = Vector2(0.708501, 1)
+curve = SubResource("Curve2D_ifgli")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Enemie_spawn_37/Path2D"]
+position = Vector2(-1, -1)
+rotation = -2.129436
