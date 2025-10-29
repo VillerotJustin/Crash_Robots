@@ -13,5 +13,7 @@ scale = Vector2(1.0062894, 0.6390533)
 texture = ExtResource("2_d3lm0")
 
 [node name="HUD" parent="." instance=ExtResource("3_volnr")]
+modulate = Color(1, 1, 1, 0.7490196)
+z_index = 4096
 size_flags_horizontal = 1
 size_flags_vertical = 1

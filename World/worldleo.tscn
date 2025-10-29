@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://nroppbpeylf"]
+[gd_scene load_steps=36 format=3 uid="uid://nroppbpeylf"]
 
 [ext_resource type="Script" uid="uid://pisn844vm7q3" path="res://Worldléo/world.gd" id="1_gu4em"]
 [ext_resource type="PackedScene" uid="uid://cexrt4fx30nos" path="res://Enemy/enemy.tscn" id="2_seve4"]
@@ -35,6 +35,15 @@ size = Vector2(78, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sikru"]
 size = Vector2(19.75, 29.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ptqw3"]
+size = Vector2(78, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ifgli"]
+size = Vector2(19.75, 29.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wyptj"]
+size = Vector2(156, 11)
 
 [sub_resource type="Curve2D" id="Curve2D_ptqw3"]
 _data = {
@@ -192,7 +201,6 @@ position = Vector2(788, 796.25)
 shape = SubResource("RectangleShape2D_sikru")
 
 [node name="arbres" type="Node2D" parent="Ysort"]
-visible = false
 position = Vector2(2, 0)
 
 [node name="ResolutionJeuGameJaqm(1)0000Calque57" type="Sprite2D" parent="Ysort/arbres"]
@@ -1592,6 +1600,846 @@ texture = ExtResource("26_qkwq6")
 z_index = -1
 position = Vector2(397, 307)
 texture = ExtResource("26_qkwq6")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson4" type="StaticBody2D" parent="Ysort"]
+position = Vector2(2416, 466)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson4"]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_ptqw3")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson4" type="Sprite2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson4"]
+texture = ExtResource("14_u55o2")
+offset = Vector2(0, -22.185)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2" type="Sprite2D" parent="Ysort"]
+position = Vector2(1086, 791)
+texture = ExtResource("12_d4owb")
+offset = Vector2(0, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_ptqw3")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson1" type="Sprite2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2"]
+position = Vector2(1086, 791)
+texture = ExtResource("12_d4owb")
+offset = Vector2(0, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson1"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_ptqw3")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2" type="Sprite2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2"]
+position = Vector2(119, 1700)
+texture = ExtResource("12_d4owb")
+offset = Vector2(0, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_ptqw3")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson1" type="Sprite2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2"]
+position = Vector2(1086, 791)
+texture = ExtResource("12_d4owb")
+offset = Vector2(0, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson1"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_ptqw3")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2" type="Sprite2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2"]
+position = Vector2(1086, 791)
+texture = ExtResource("12_d4owb")
+offset = Vector2(0, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_ptqw3")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson1" type="Sprite2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2"]
+position = Vector2(1086, 791)
+texture = ExtResource("12_d4owb")
+offset = Vector2(0, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson1"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_ptqw3")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0003s0001Buisson2" type="Sprite2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2"]
+position = Vector2(1286, 794)
+texture = ExtResource("13_sikru")
+offset = Vector2(0, -18.84)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0001Buisson2"]
+position = Vector2(2, -4)
+shape = SubResource("RectangleShape2D_ptqw3")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson3" type="Sprite2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2"]
+position = Vector2(1188, 793)
+texture = ExtResource("14_u55o2")
+offset = Vector2(0, -22.185)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson3"]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_ptqw3")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson3" type="Sprite2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson3"]
+position = Vector2(1228, -327)
+texture = ExtResource("14_u55o2")
+offset = Vector2(0, -22.185)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson3/RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson3"]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_ptqw3")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0003s0001Buisson2" type="Sprite2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2"]
+position = Vector2(1349, 1715)
+texture = ExtResource("13_sikru")
+offset = Vector2(0, -18.84)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0001Buisson2"]
+position = Vector2(2, -4)
+shape = SubResource("RectangleShape2D_ptqw3")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson3" type="Sprite2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2"]
+position = Vector2(-1855, 2054)
+texture = ExtResource("14_u55o2")
+offset = Vector2(0, -22.185)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson3"]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_ptqw3")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson3" type="Sprite2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson3"]
+position = Vector2(-757, -1362)
+texture = ExtResource("14_u55o2")
+offset = Vector2(0, -22.185)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0000Buisson2/RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson3/RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson3"]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_ptqw3")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0003s0001Buisson3" type="Sprite2D" parent="Ysort"]
+position = Vector2(1286, 794)
+texture = ExtResource("13_sikru")
+offset = Vector2(0, -18.84)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0001Buisson3"]
+position = Vector2(2, -4)
+shape = SubResource("RectangleShape2D_ptqw3")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre4" type="Sprite2D" parent="Ysort"]
+position = Vector2(791, 786)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre3" type="Sprite2D" parent="Ysort"]
+position = Vector2(954, 706)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre3"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre2" type="Sprite2D" parent="Ysort"]
+position = Vector2(309, 800)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre2"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre4" type="Sprite2D" parent="Ysort"]
+position = Vector2(1619, 202)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre4"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre3" type="Sprite2D" parent="Ysort"]
+position = Vector2(285.53003, 196.65002)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre3"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre5" type="Sprite2D" parent="Ysort"]
+position = Vector2(453.53003, 271.65002)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre4" type="Sprite2D" parent="Ysort"]
+position = Vector2(285.53003, 196.65002)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre4"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre5" type="Sprite2D" parent="Ysort"]
+position = Vector2(616.53, 191.65002)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre5"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson5" type="Sprite2D" parent="Ysort"]
+position = Vector2(1188, 793)
+texture = ExtResource("14_u55o2")
+offset = Vector2(0, -22.185)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0003s0002Buisson5"]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_ptqw3")
+
+[node name="barrière3" type="Sprite2D" parent="Ysort"]
+y_sort_enabled = true
+position = Vector2(979, 455.00003)
+scale = Vector2(1.0162789, 1.0477277)
+texture = ExtResource("12_u55o2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/barrière3"]
+position = Vector2(-0.00012207031, 20.699524)
+scale = Vector2(0.98398155, 0.95444614)
+shape = SubResource("RectangleShape2D_wyptj")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre6" type="Sprite2D" parent="Ysort"]
+position = Vector2(453.53003, 271.65002)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre5" type="Sprite2D" parent="Ysort"]
+position = Vector2(-4136, 1273)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre5"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre6" type="Sprite2D" parent="Ysort"]
+position = Vector2(3439.9998, 183)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre6"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre7" type="Sprite2D" parent="Ysort"]
+position = Vector2(-1414, 171)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre6" type="Sprite2D" parent="Ysort"]
+position = Vector2(-2717.47, -797.35)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre6"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre7" type="Sprite2D" parent="Ysort"]
+position = Vector2(-2386.47, -802.35)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre7"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre8" type="Sprite2D" parent="Ysort"]
+position = Vector2(-2549.47, -722.35)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre7" type="Sprite2D" parent="Ysort"]
+position = Vector2(-4478.4697, 225.65002)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre7"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre8" type="Sprite2D" parent="Ysort"]
+position = Vector2(-4147.4697, 220.65002)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre8"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre9" type="Sprite2D" parent="Ysort"]
+position = Vector2(-5381, 192)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre8" type="Sprite2D" parent="Ysort"]
+position = Vector2(-5439.47, 1359.65)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre8"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre9" type="Sprite2D" parent="Ysort"]
+position = Vector2(-5108.47, 1354.65)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre9"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre10" type="Sprite2D" parent="Ysort"]
+position = Vector2(-5271.47, 1434.65)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre9" type="Sprite2D" parent="Ysort"]
+position = Vector2(-4558.47, 2399.65)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre9"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre10" type="Sprite2D" parent="Ysort"]
+position = Vector2(-4227.47, 2394.65)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre10"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre11" type="Sprite2D" parent="Ysort"]
+position = Vector2(-4390.47, 2474.65)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre10" type="Sprite2D" parent="Ysort"]
+position = Vector2(-2629.4702, 2442.65)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre10"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre11" type="Sprite2D" parent="Ysort"]
+position = Vector2(-2298.4702, 2437.65)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre11"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre12" type="Sprite2D" parent="Ysort"]
+position = Vector2(-2461.4702, 2517.65)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre11" type="Sprite2D" parent="Ysort"]
+position = Vector2(-2651.47, 1294.6499)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre11"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre12" type="Sprite2D" parent="Ysort"]
+position = Vector2(-2320.47, 1289.6499)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre12"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre13" type="Sprite2D" parent="Ysort"]
+position = Vector2(-2483.47, 1369.6499)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre12" type="Sprite2D" parent="Ysort"]
+position = Vector2(-5408, -1898)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre12"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre13" type="Sprite2D" parent="Ysort"]
+position = Vector2(-4303, -1869)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre13"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre14" type="Sprite2D" parent="Ysort"]
+position = Vector2(-5272, -1389)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre13" type="Sprite2D" parent="Ysort"]
+position = Vector2(-284, -856)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre13"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre14" type="Sprite2D" parent="Ysort"]
+position = Vector2(1406, -861)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre14"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre15" type="Sprite2D" parent="Ysort"]
+position = Vector2(724, -842)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre14" type="Sprite2D" parent="Ysort"]
+position = Vector2(2671.53, -873.35)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre14"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre15" type="Sprite2D" parent="Ysort"]
+position = Vector2(3002.53, -878.35)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre15"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre16" type="Sprite2D" parent="Ysort"]
+position = Vector2(2839.53, -798.35)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre15" type="Sprite2D" parent="Ysort"]
+position = Vector2(2288.53, -1906.35)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre15"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre16" type="Sprite2D" parent="Ysort"]
+position = Vector2(2619.53, -1911.35)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre16"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre17" type="Sprite2D" parent="Ysort"]
+position = Vector2(2456.53, -1831.35)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre16" type="Sprite2D" parent="Ysort"]
+position = Vector2(1284.53, -1935.35)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre16"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre17" type="Sprite2D" parent="Ysort"]
+position = Vector2(1615.53, -1940.35)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre17"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre18" type="Sprite2D" parent="Ysort"]
+position = Vector2(1452.53, -1860.35)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre17" type="Sprite2D" parent="Ysort"]
+position = Vector2(-694.47, 2362.65)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre17"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre18" type="Sprite2D" parent="Ysort"]
+position = Vector2(-363.46997, 2357.65)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre18"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre19" type="Sprite2D" parent="Ysort"]
+position = Vector2(-526.47, 2437.65)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre18" type="Sprite2D" parent="Ysort"]
+position = Vector2(1125.53, 2340.65)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre18"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre19" type="Sprite2D" parent="Ysort"]
+position = Vector2(1456.53, 2335.65)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre19"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre20" type="Sprite2D" parent="Ysort"]
+position = Vector2(1293.53, 2415.65)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre19" type="Sprite2D" parent="Ysort"]
+position = Vector2(2288.53, 2369.65)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre19"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre20" type="Sprite2D" parent="Ysort"]
+position = Vector2(5979, 2328)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre20"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre21" type="Sprite2D" parent="Ysort"]
+position = Vector2(-602, 1251)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre20" type="Sprite2D" parent="Ysort"]
+position = Vector2(3213.53, 1531.6499)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre20"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre21" type="Sprite2D" parent="Ysort"]
+position = Vector2(3544.53, 1526.6499)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre21"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre22" type="Sprite2D" parent="Ysort"]
+position = Vector2(3381.53, 1606.6499)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre21" type="Sprite2D" parent="Ysort"]
+position = Vector2(4683, -1864)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre21"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre22" type="Sprite2D" parent="Ysort"]
+position = Vector2(4822.5303, -568.3501)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre22"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre23" type="Sprite2D" parent="Ysort"]
+position = Vector2(3485, -647)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre22" type="Sprite2D" parent="Ysort"]
+position = Vector2(6871.53, -1960.35)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre22"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre23" type="Sprite2D" parent="Ysort"]
+position = Vector2(7202.53, -1965.35)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre23"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre24" type="Sprite2D" parent="Ysort"]
+position = Vector2(7039.53, -1885.35)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre23" type="Sprite2D" parent="Ysort"]
+position = Vector2(6028.53, -871.35)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre23"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre24" type="Sprite2D" parent="Ysort"]
+position = Vector2(6359.53, -876.35)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre24"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre25" type="Sprite2D" parent="Ysort"]
+position = Vector2(6196.53, -796.35)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre24" type="Sprite2D" parent="Ysort"]
+position = Vector2(6022, 198)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre24"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre25" type="Sprite2D" parent="Ysort"]
+position = Vector2(7380, -847)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre25"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre26" type="Sprite2D" parent="Ysort"]
+position = Vector2(7405, 2548)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre25" type="Sprite2D" parent="Ysort"]
+position = Vector2(6043.53, 1318.65)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre25"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre26" type="Sprite2D" parent="Ysort"]
+position = Vector2(6374.53, 1313.65)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre26"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre27" type="Sprite2D" parent="Ysort"]
+position = Vector2(6211.53, 1393.65)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre26" type="Sprite2D" parent="Ysort"]
+position = Vector2(4473.53, 2366.65)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre26"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre27" type="Sprite2D" parent="Ysort"]
+position = Vector2(4804.53, 2361.65)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre27"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre28" type="Sprite2D" parent="Ysort"]
+position = Vector2(4641.53, 2441.65)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre27" type="Sprite2D" parent="Ysort"]
+position = Vector2(2513.5298, 254.6499)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre27"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre28" type="Sprite2D" parent="Ysort"]
+position = Vector2(4993, 1269)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre28"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre29" type="Sprite2D" parent="Ysort"]
+position = Vector2(2681.5298, 329.6499)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre28" type="Sprite2D" parent="Ysort"]
+position = Vector2(-2990, -1820)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre28"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre29" type="Sprite2D" parent="Ysort"]
+position = Vector2(-2267, -1714)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre29"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre30" type="Sprite2D" parent="Ysort"]
+position = Vector2(-3634, -1307)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre29" type="Sprite2D" parent="Ysort"]
+position = Vector2(-270, -1343)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre29"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre30" type="Sprite2D" parent="Ysort"]
+position = Vector2(272, -1871)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre30"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre31" type="Sprite2D" parent="Ysort"]
+position = Vector2(-1635, -1835)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre30" type="Sprite2D" parent="Ysort"]
+position = Vector2(-2863.47, 204.65002)
+texture = ExtResource("15_52wsp")
+offset = Vector2(1.97, -89.39)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0000Arbre30"]
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre31" type="Sprite2D" parent="Ysort"]
+position = Vector2(-2188, 810)
+texture = ExtResource("16_qj5jx")
+offset = Vector2(0, -95.15)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ysort/RobotLeJeuAssetVersionPettiePourLeJeu0004s0001Arbre31"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0004s0002Arbre32" type="Sprite2D" parent="Ysort"]
+position = Vector2(-2260, 181)
+texture = ExtResource("17_xyg6t")
+offset = Vector2(5.005, -96.925)
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Ysort"]
+position = Vector2(788, 796.25)
+shape = SubResource("RectangleShape2D_ifgli")
+
+[node name="RobotLeJeuAssetVersionPettiePourLeJeu0008VaisseauCassé" type="Sprite2D" parent="Ysort"]
+position = Vector2(1190, 368)
+texture = ExtResource("10_xyg6t")
+
+[node name="RigidBody2D2" type="StaticBody2D" parent="Ysort"]
+y_sort_enabled = true
+position = Vector2(1245, 477.5)
+scale = Vector2(0.9999994, 0.9999994)
+
+[node name="barrière" type="Sprite2D" parent="Ysort/RigidBody2D2"]
+y_sort_enabled = true
+position = Vector2(-1.0000005, -2.4999905)
+scale = Vector2(1.0162795, 1.0477283)
+texture = ExtResource("12_u55o2")
+offset = Vector2(0, -14.575)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ysort/RigidBody2D2"]
+position = Vector2(-4.000244, 2.6874695)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_wyptj")
 
 [node name="Enemies" type="Node2D" parent="."]
 

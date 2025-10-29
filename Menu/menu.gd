@@ -9,7 +9,7 @@ extends Control
 
 var current_story: int = 0
 
-@export var Scene_Path: String = "res://World/world.gd"
+@export var Scene_Path: String = "res://World/world.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -41,6 +41,7 @@ func next_story_panel() -> void:
 			load_game()
 
 func load_game() -> void:
+	print("Start Game")
 	get_tree().change_scene_to_file(Scene_Path)
 
 func _on_button_pressed() -> void:
