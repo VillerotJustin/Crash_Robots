@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://byy26ywqvjlxu"]
+[gd_scene load_steps=9 format=3 uid="uid://byy26ywqvjlxu"]
 
 [ext_resource type="Script" uid="uid://cyw0eoxijhb1u" path="res://Menu/menu.gd" id="1_rwxi6"]
 [ext_resource type="VideoStream" uid="uid://dsc3baold3km" path="res://Menu/Assets/RPReplay_Final1761721290.ogv" id="2_ihied"]
+[ext_resource type="AudioStream" uid="uid://b8teb857778hj" path="res://sons/intro jeu.wav" id="2_tf6kh"]
 [ext_resource type="Texture2D" uid="uid://ow1pkvy4f5ve" path="res://Menu/Assets/resolution_jeu_game_jam-1.png" id="3_eafcm"]
 [ext_resource type="Texture2D" uid="uid://36w78cggg066" path="res://Menu/Assets/resolution_jeu_game_jam-2.png" id="4_tf6kh"]
 [ext_resource type="Texture2D" uid="uid://r4fh5d48kcug" path="res://Menu/Assets/resolution_jeu_game_jam-3.png" id="5_mf1wf"]
@@ -19,6 +20,10 @@ script = ExtResource("1_rwxi6")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(960, 540)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_tf6kh")
+autoplay = true
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1

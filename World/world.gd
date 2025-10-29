@@ -6,6 +6,7 @@ extends Node2D
 @export var upgrade_locations: Array[Marker2D] # In order (Drill, Gun, Dash)
 @export var enemy_spawn_points: Array[Marker2D]
 @export var enemy_scene: PackedScene
+@onready var music: AudioStreamPlayer2D  = $Camera/AudioStreamPlayer2D
 
 var collectible_spawned: bool = false
 var enemy_spawned: bool = false
@@ -13,7 +14,7 @@ var enemy_spawned: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	music.play()
 
 
 # -------------------- ENEMY SPAWNING --------------------
