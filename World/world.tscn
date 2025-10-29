@@ -2928,8 +2928,6 @@ bullet_speed = 600.0
 fire_rate = 0.4
 Dash_mult = 20.0
 main_camera = NodePath("../../Camera")
-drilling = true
-dashing = true
 distance_from_center = 50.0
 
 [node name="Collectibles" type="Node2D" parent="."]
