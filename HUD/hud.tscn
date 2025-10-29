@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bspbyg2n6kyr5" path="res://HUD/Assets/Battery_bar_BG.png" id="2_mi5n8"]
 [ext_resource type="Texture2D" uid="uid://busdesgl7oldu" path="res://HUD/Assets/Battery_bar.png" id="2_yu8mg"]
 [ext_resource type="Texture2D" uid="uid://ryxirpqp251p" path="res://HUD/Assets/Drill_UI.png" id="4_jvmdh"]
-[ext_resource type="Texture2D" uid="uid://io6yq5b0kyov" path="res://HUD/Assets/Gun_UI.png" id="5_tnm0g"]
-[ext_resource type="Texture2D" uid="uid://cqnnvy3uq2ohy" path="res://HUD/Assets/dash_UI.png" id="6_ncsg0"]
+[ext_resource type="Texture2D" uid="uid://kjs6w483sofy" path="res://World/Assets/upgrade_0001_Calque-1.png" id="5_q5vrg"]
+[ext_resource type="Texture2D" uid="uid://bn1mn1uqksvv8" path="res://World/Assets/upgrade_0000_Calque-2.png" id="6_03xa0"]
 [ext_resource type="Texture2D" uid="uid://8eamut7lxy1u" path="res://HUD/Assets/Ship_Part_1_UI.png" id="7_q5vrg"]
 [ext_resource type="Texture2D" uid="uid://d3pyf0kfq7sm" path="res://HUD/Assets/Ship_Part_2_UI.png" id="8_03xa0"]
 [ext_resource type="Texture2D" uid="uid://d2uyfqrgnpsp2" path="res://HUD/Assets/Ship_Part_3_UI.png" id="9_5ac6t"]
@@ -64,19 +64,18 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("4_jvmdh")
-expand_mode = 5
 stretch_mode = 4
 
 [node name="Upgrade_Gun" type="TextureRect" parent="VBoxContainer/Top_HUD/Bonuses"]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("5_tnm0g")
+texture = ExtResource("5_q5vrg")
 stretch_mode = 4
 
 [node name="Upgrade_Dash" type="TextureRect" parent="VBoxContainer/Top_HUD/Bonuses"]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("6_ncsg0")
+texture = ExtResource("6_03xa0")
 stretch_mode = 4
 
 [node name="Center_HUD" type="HBoxContainer" parent="VBoxContainer"]
