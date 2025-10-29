@@ -1,0 +1,135 @@
+[gd_scene load_steps=8 format=3 uid="uid://byy26ywqvjlxu"]
+
+[ext_resource type="Script" uid="uid://cyw0eoxijhb1u" path="res://Menu/menu.gd" id="1_rwxi6"]
+[ext_resource type="VideoStream" uid="uid://dsc3baold3km" path="res://Menu/Assets/RPReplay_Final1761721290.ogv" id="2_ihied"]
+[ext_resource type="Texture2D" uid="uid://ow1pkvy4f5ve" path="res://Menu/Assets/resolution_jeu_game_jam-1.png" id="3_eafcm"]
+[ext_resource type="Texture2D" uid="uid://36w78cggg066" path="res://Menu/Assets/resolution_jeu_game_jam-2.png" id="4_tf6kh"]
+[ext_resource type="Texture2D" uid="uid://r4fh5d48kcug" path="res://Menu/Assets/resolution_jeu_game_jam-3.png" id="5_mf1wf"]
+[ext_resource type="Texture2D" uid="uid://duo35f4jfyj2s" path="res://Menu/Assets/resolution_jeu_game_jam-4.png" id="6_xuj3a"]
+[ext_resource type="Texture2D" uid="uid://n4y7yqks8r0c" path="res://Menu/Assets/resolution_jeu_game_jam-5.png" id="7_0k1h5"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rwxi6")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 1.7778
+metadata/_edit_use_anchors_ = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Panel/AspectRatioContainer"]
+layout_mode = 2
+stream = ExtResource("2_ihied")
+autoplay = true
+expand = true
+loop = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Story_1" type="TextureRect" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 1920.0
+offset_right = 3000.0
+offset_bottom = 1920.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5707964
+texture = ExtResource("3_eafcm")
+stretch_mode = 4
+
+[node name="Story_2" type="TextureRect" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 1920.0
+offset_right = 3000.0
+offset_bottom = 1920.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5707964
+texture = ExtResource("4_tf6kh")
+stretch_mode = 4
+
+[node name="Story_3" type="TextureRect" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 1920.0
+offset_right = 3000.0
+offset_bottom = 1920.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5707964
+texture = ExtResource("5_mf1wf")
+stretch_mode = 4
+
+[node name="Story_4" type="TextureRect" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 1920.0
+offset_right = 3000.0
+offset_bottom = 1920.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5707964
+texture = ExtResource("6_xuj3a")
+stretch_mode = 4
+
+[node name="Story_5" type="TextureRect" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 1920.0
+offset_right = 3000.0
+offset_bottom = 1920.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5707964
+texture = ExtResource("7_0k1h5")
+stretch_mode = 4
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -280.0
+offset_right = 75.0
+offset_bottom = -180.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 64
+text = "Play"
+
+[connection signal="timeout" from="Timer" to="." method="next_story_panel"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
