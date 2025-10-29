@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://nroppbpeylf"]
+[gd_scene load_steps=33 format=4 uid="uid://nroppbpeylf"]
 
 [ext_resource type="Script" uid="uid://pisn844vm7q3" path="res://Worldléo/world.gd" id="1_gu4em"]
 [ext_resource type="PackedScene" uid="uid://cexrt4fx30nos" path="res://Enemy/enemy.tscn" id="2_seve4"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://b5bd4o4n8o11" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/resolution_jeu_game_jaqm-(1)_0005_Calque-14.png" id="24_miwxp"]
 [ext_resource type="Texture2D" uid="uid://ddre5o0tbe1ns" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/resolution_jeu_game_jaqm-(1)_0006_Calque-8.png" id="25_mvx2k"]
 [ext_resource type="Texture2D" uid="uid://bwedppr236ajg" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/resolution_jeu_game_jaqm-(1)_0007_Calque-9.png" id="26_qkwq6"]
+[ext_resource type="PackedScene" uid="uid://2bf2kga4a5xn" path="res://World/Rock/rock.tscn" id="27_ifgli"]
 
 [sub_resource type="Curve2D" id="Curve2D_awrha"]
 _data = {
@@ -2416,3 +2417,71 @@ offset = Vector2(5.005, -96.925)
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Ysort/decors/arbres terrain"]
 position = Vector2(788, 796.25)
 shape = SubResource("RectangleShape2D_sikru")
+
+[node name="Roches" type="Node" parent="."]
+
+[node name="Rock" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(5140, 658)
+
+[node name="Rock2" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(5273, 660)
+
+[node name="Rock3" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(5409, 657)
+
+[node name="Rock4" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(2622, -1568)
+
+[node name="Rock5" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(2750, -1569)
+
+[node name="Rock6" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(2877, -1571)
+
+[node name="Rock7" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(3005, -1572)
+
+[node name="Rock8" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(3127, -1568)
+
+[node name="Rock9" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(838, -1460)
+
+[node name="Rock10" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(834, -1315)
+
+[node name="Rock11" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(-1089, -860)
+
+[node name="Rock12" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(-819, -861)
+
+[node name="Rock13" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(-953, -861)
+
+[node name="Rock14" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(-4422, -535)
+
+[node name="Rock15" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(-4425, -664)
+
+[node name="Rock16" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(-4418, -409)
+
+[node name="Rock17" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(-4805, 1736)
+
+[node name="Rock18" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(-4669, 1695)
+
+[node name="Rock19" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(-4946, 1692)
+
+[node name="Rock20" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(-966, 740)
+
+[node name="Rock21" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(307, 2633)
+
+[node name="Rock22" parent="Roches" instance=ExtResource("27_ifgli")]
+position = Vector2(309, 2760)
