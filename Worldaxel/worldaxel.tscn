@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://c47ejnu6tosco"]
+[gd_scene load_steps=28 format=4 uid="uid://1pu07ia7ssnm"]
 
 [ext_resource type="Script" uid="uid://cudtueshvd0ih" path="res://Worldaxel/world.gd" id="1_b30px"]
 [ext_resource type="PackedScene" uid="uid://cexrt4fx30nos" path="res://Enemy/enemy.tscn" id="2_jo7gg"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bplw1ef4yivnp" path="res://Space_Shuttle/space_shuttle.tscn" id="9_7rupm"]
 [ext_resource type="PackedScene" uid="uid://bhabco77hpcn1" path="res://Space_Shuttle/Teleporter/teleporter.tscn" id="10_h1u5r"]
 [ext_resource type="Texture2D" uid="uid://cb5jxjr7apten" path="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0008_Vaisseau-Cassé.png" id="11_6d0b3"]
+[ext_resource type="AudioStream" uid="uid://ba4pd5qm3g4n8" path="res://sons/jeu gam jam à faire boucler.mp3" id="12_jo7gg"]
 
 [sub_resource type="Curve2D" id="Curve2D_awrha"]
 _data = {
@@ -92,6 +93,7 @@ bullet_speed = 600.0
 fire_rate = 0.4
 Dash_mult = 20.0
 main_camera = NodePath("../Camera")
+dashing = true
 
 [node name="Space_Shuttle" parent="." node_paths=PackedStringArray("teleporter_inside", "teleporter_outside", "entry_point", "exit_point") instance=ExtResource("9_7rupm")]
 position = Vector2(999, -3773)
@@ -524,7 +526,9 @@ position = Vector2(-1, -1)
 rotation = -2.129436
 
 [node name="collisions eau" type="StaticBody2D" parent="."]
+disable_mode = 2
 collision_layer = 16
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="collisions eau"]
 position = Vector2(-959, 299.5)
@@ -637,3 +641,6 @@ shape = SubResource("RectangleShape2D_ak5jf")
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="collisions eau"]
 position = Vector2(-1499, 2699)
 shape = SubResource("RectangleShape2D_ak5jf")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_jo7gg")

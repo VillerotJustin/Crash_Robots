@@ -2,6 +2,10 @@ extends CharacterBody2D
 
 class_name Player
 
+@onready var collider: CollisionShape2D = $CollisionShape2D2
+
+@export var winned_scene: String = "res://Menu/winned.tscn"
+
 @export_category("Pistol")
 @export var Bullet_Packed_Scene: PackedScene = ResourceLoader.load("res://Player/Bullet/bullet.tscn")
 @export var player_center: Marker2D
@@ -14,9 +18,13 @@ var last_fire: float
 @export_category("Mouvement")
 @export var SPEED: float = 300.0
 @export var Dash_mult: float = 10
+@onready var dash_timer: Timer = $DashDuration
+var dash_direction:Vector2 = Vector2.ZERO
 @export var main_camera: G_camera
 var is_dashing:bool = false
 var input_direction = Vector2.ZERO
+
+#$CollisionShape2D.set_deferred("disabled",true)
 
 @export_category("Timer")
 @export var battery_timer:Timer
@@ -45,22 +53,31 @@ var body_sprite: String = "res://Player/Assets/Robot_Mort.png"
 func _ready() -> void:
 	if Animator==null:
 		Animator=$AnimatedSprite2D
+	
 	if battery_timer == null:
 		battery_timer = $Battery
 		
 	spawn_point = global_position
+	
 	# TODO check / auto fill references
 	
 	last_hit = Time.get_unix_time_from_system()
 
 func get_movement_input():
-	if !is_dashing:
+	if not is_dashing:
 		input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 		velocity = input_direction * SPEED
+	else :
+		velocity = dash_direction * SPEED * Dash_mult
 	
 	if Input.is_action_just_pressed("dash") and dashing:
+		print("dash")
+		set_collision_mask_value(5, false)
 		velocity *= Dash_mult
-		set_collision_layer_value(5, false) # Disable dashable_gap collision
+		dash_timer.start()
+		#dash_layer.global_position *= 9999999999999
+		#dash_layer.process_mode = Node.PROCESS_MODE_DISABLE1D
+		#set_collision_layer_value(5, false) # Disable dashable_gap collision
 	
 	if velocity.length()>0:
 		Animator.play("walk")
@@ -121,8 +138,12 @@ func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	main_camera.update_position(global_position)
 
 func _on_dash_end() -> void:
+	print("dash_end")
 	is_dashing = false
-	set_collision_layer_value(5, true)
+	set_collision_mask_value(5, true)
+	#dash_layer.global_position = dash_layer_pos
+	#dash_layer.process_mode = Node.PROCESS_MODE_PAUSABLE
+	#set_collision_layer_value(5, true)
 
 func collect_part(part_name: String):
 	match part_name:
@@ -136,6 +157,8 @@ func collect_part(part_name: String):
 			Ship_Part_4 = true
 		"Part_5":
 			Ship_Part_5 = true
+	if Ship_Part_1 and Ship_Part_2 and Ship_Part_3 and Ship_Part_4 and Ship_Part_5:
+		win()
 
 func stop_battery_timer():
 	print("stop_timer")
@@ -172,3 +195,6 @@ func _on_hit_box_body_entered(_body: Node2D) -> void:
 				print("Battery empty!")
 
 			print("New time left:", remaining)
+
+func win() -> void:
+	get_tree().change_scene_to_file(winned_scene)
