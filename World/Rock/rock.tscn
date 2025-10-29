@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://2bf2kga4a5xn"]
+
+[ext_resource type="Script" uid="uid://c54wj7siwpb5c" path="res://World/Rock/rock.gd" id="1_nn1ad"]
+[ext_resource type="Texture2D" uid="uid://b0mxi5yls7ss8" path="res://World/Rock/Assets/Roche_1.png" id="2_ur363"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pjsj"]
+size = Vector2(120, 120)
+
+[node name="Rock" type="StaticBody2D"]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_nn1ad")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.9999976, 1.000001)
+scale = Vector2(0.90225565, 0.9302326)
+texture = ExtResource("2_ur363")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_2pjsj")

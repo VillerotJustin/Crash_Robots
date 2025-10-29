@@ -1,5 +1,7 @@
 extends Area2D
 
+class_name collectible
+
 @export_category("References")
 @export_enum("Drill", "Gun", "Dash", "Part_1", "Part_2", "Part_3", "Part_4", "Part_5") var collectible_type: String = "Part_5"
 @export var sprite_list: Array[String] = [
@@ -17,7 +19,6 @@ extends Area2D
 func _ready() -> void:
 	sprite = $Sprite2D
 	_set_sprite_texture()
-	connect("area_entered", Callable(self, "_on_area_entered"))
 
 func _set_sprite_texture() -> void:
 	var index:int

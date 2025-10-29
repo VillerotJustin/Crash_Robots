@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvri8ym7li2ug"
-path="res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0005s_0001_Roche2.png-46495f8d842d07e743b218b82e3a18c4.ctex"
+uid="uid://deiui3yxlx4cw"
+path="res://.godot/imported/Roche_3.png-708e4289d05ab2cb3a90fc8e30af74df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0000s_0004_Tete-De-Robot-/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0005s_0001_Roche2.png"
-dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_version-pettie-pour-le-jeu_0005s_0001_Roche2.png-46495f8d842d07e743b218b82e3a18c4.ctex"]
+source_file="res://World/Rock/Assets/Roche_3.png"
+dest_files=["res://.godot/imported/Roche_3.png-708e4289d05ab2cb3a90fc8e30af74df.ctex"]
 
 [params]
 

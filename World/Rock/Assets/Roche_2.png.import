@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkdq73pco4ywk"
-path="res://.godot/imported/Robot_Le_Jeu_Asset_0006_Drill.png-5bde1e46b695c6b08429d78d899dba1a.ctex"
+uid="uid://bw1sf7q3yamk4"
+path="res://.godot/imported/Roche_2.png-25d9cae5bcceb824a6a89522f54437a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphic_Temporaire/Robot_Le_Jeu_Asset_0001s_0005_Brillance-Autour-Des-Upgrades HD/Robot_Le_Jeu_Asset_0006_Drill.png"
-dest_files=["res://.godot/imported/Robot_Le_Jeu_Asset_0006_Drill.png-5bde1e46b695c6b08429d78d899dba1a.ctex"]
+source_file="res://World/Rock/Assets/Roche_2.png"
+dest_files=["res://.godot/imported/Roche_2.png-25d9cae5bcceb824a6a89522f54437a2.ctex"]
 
 [params]
 
